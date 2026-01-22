@@ -1,0 +1,24 @@
+/* Dark mode (default) colors */
+:root {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --accent-color: #bb86fc;
+}
+
+/* Light mode colors */
+.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #03dac6;
+}
+
+/* Apply the variables to your elements */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+a {
+  color: var(--accent-color);
+}
