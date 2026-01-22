@@ -1,11 +1,17 @@
 body{
-    background-color: rgb(7, 28, 52);
+    background-color: #161412;
 
 }
 
 main{
     margin-left:60px ;
 }
+
+
+a {
+    text-decoration: none;
+  }
+
 
 #header{
     color: aliceblue;
@@ -18,15 +24,7 @@ main{
     margin-top: -15px;
     color: rgb(155, 195, 227);
 }
-.top{
-    border: 1px;
-    border-style:solid;
-    padding-left: 15px;
-    background-color: rgb(14, 73, 100);
-    color: rgb(14, 73, 100);
-    margin-left: -10px;
-    margin-right: -8px;
-}
+
 #tools-container{
     display: flex;
     flex-wrap: wrap;
@@ -39,7 +37,7 @@ main{
     padding-right: 10px;
     color: rgb(145, 218, 235);
     border-color:rgb(14, 73, 100);
-    background-color:rgb(14, 73, 100);
+    background-color:#0F2129);
     border-radius: 20px;
     max-width: 270px;
     text-align: left;
@@ -48,54 +46,11 @@ main{
 #links{
     color: aliceblue;
 } 
-#stars{
-    margin-top: -20px;
-    height: 35px;
-}
+
 #icons{
 height: 40px;
 margin-left: 109px;
 border-radius: 100px;
-}
-
-.SideBar:hover{
-    transform: translateX(0);
-}
-
-.SideBar{
-    position: fixed;
-    transform: translateX(-160px);
-    transition: transform 0.3s ease;
-    border-color: rgb(30, 98, 153);
-    border-width: 2px;
-    border-right-style:solid ;
-    top: 0;
-    list-style-type: none;
-    margin-left: -10px;
-    margin-top: 0px;
-    padding: 0px;
-    padding-right: 20px;
-    padding-top: 15px;
-    width: 200px;
-    background-color: #1c4154;
-    min-height: 100vh;
-}
-
-.SideBar2{
-    position: fixed;
-    transform: translateX(-180px);
-    transition: transform 0.3s ease;
-    border-width: 2px;
-    top: 0;
-    list-style-type: none;
-    margin-left: -10px;
-    margin-top: 0px;
-    padding: 0px;
-    padding-right: 20px;
-    padding-top: 15px;
-    width: 200px;
-    background-color: #1c4154;
-    min-height: 100vh;
 }
 
 #IconsNavbar{
@@ -103,7 +58,7 @@ margin-left: 20px;
 margin-top: 20px;
 height: 30px;
 transform:translateX(135px);
-border-radius: 100px;
+border-radius: px;
 }
 
 #iconsonbar{
