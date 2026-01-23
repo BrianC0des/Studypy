@@ -1,7 +1,11 @@
-body{
-    background-color: #11052c;
+/* Import in your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #000000;
 }
+
 
 main{
     margin-left:60px ;
@@ -11,6 +15,7 @@ main{
 a {
     text-decoration: none;
   }
+
 
 
 #header{
@@ -31,18 +36,31 @@ a {
     justify-content: center;
 }
 .Tools{
-    border: 1px;
+    border: 1.5px;
     border-style: solid;
     padding-left: 10px;
     padding-right: 10px;
-    color: rgb(145, 218, 235);
-    border-color:rgb(14, 73, 100);
-    background-color:#10336a;
+    color: #84AEF3;
+    border-color:rgb(0, 168, 245);
+    background-color:#232432;
     border-radius: 20px;
     max-width: 270px;
     text-align: left;
     margin: 10px;
 }
+
+
+.Tools h5{
+    font-family:;
+    font-size: 15px;
+
+
+
+
+
+
+}
+
 #links{
     color: aliceblue;
 } 
