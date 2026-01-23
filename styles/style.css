@@ -1,5 +1,5 @@
 body{
-    background-color: #000000;
+    background-color: #11052c;
 
 }
 
@@ -37,7 +37,7 @@ a {
     padding-right: 10px;
     color: rgb(145, 218, 235);
     border-color:rgb(14, 73, 100);
-    background-color:#060e11;
+    background-color:#10336a;
     border-radius: 20px;
     max-width: 270px;
     text-align: left;
@@ -50,7 +50,6 @@ a {
 #icons{
 height: 40px;
 margin-left: 109px;
-border-radius: 100px;
 }
 
 #IconsNavbar{
