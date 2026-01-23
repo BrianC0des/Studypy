@@ -1,27 +1,133 @@
-/* Import in your CSS file */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
-
-body {
-  font-family: 'JetBrains Mono', monospace;
-  background-color: #000000;
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 260px;
+  background: #000000;
+  padding: 15px;
+  z-index: 99;
+}
+.logo {
+  font-size: 25px;
+  padding: 0 15px;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+.menu-content::-webkit-scrollbar {
+  display: none;
+}
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+.menu-title {
+  color: #fff;
+  font-size: 14px;
+  padding: 15px 20px;
+}
+.item a,
+.submenu-item {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+}
+.item i {
+  font-size: 12px;
+}
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background:#000000;
+}
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  height: calc(100% + 100vh);
+  background: #000000;
+  display: none;
+}
+.show-submenu ~ .submenu {
+  display: block;
+}
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+.submenu .menu-title i {
+  margin-right: 10px;
+}
+.navbar,
+.main {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+}
+.navbar {
+  position: fixed;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 25px;
+  background: #000000;
+  cursor: pointer;
+}
+.navbar #sidebar-close {
+  cursor: pointer;
 }
 
 
-main{
-    margin-left:60px ;
+.main {
+  position: relative;
+  min-height: 100vh;  
+  padding: 80px 20px 20px;
+  z-index: 100;
+  background: #000000;
+  overflow-y: auto;
 }
 
-
-a {
-    text-decoration: none;
-  }
-
-
-
-#header{
-    color: aliceblue;
-    text-align: center;
+.main h1 {
+  color: #11101d;
+  font-size: 40px;
+  text-align: center;
 }
+
 #title{
     color: aliceblue;
 }
@@ -34,67 +140,58 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-.Tools{
-    border: 1.5px;
-    border-style: solid;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #84AEF3;
-    border-color:rgb(0, 168, 245);
-    background-color:#232432;
-    border-radius: 20px;
-    max-width: 270px;
-    text-align: left;
-    margin: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-
-.Tools h5{
-    font-family:;
-    font-size: 15px;
-
-
-
-
-
-
-}
 
 #links{
     color: aliceblue;
+    display: block;
+    text-decoration: none;
 } 
 
-#icons{
-height: 40px;
-margin-left: 109px;
+.Tools{
+    border: 1px solid rgb(14, 73, 100); 
+    padding: 20px; 
+    color: rgb(145, 218, 235);
+    background-color: #060e11;
+    border-radius: 20px;
+    max-width: 270px;
+    width: 100%;
+    text-align: left;
+    margin: 10px;
+    transition: transform 0.2s, border-color 0.2s;
 }
 
-#IconsNavbar{
-margin-left: 20px;
-margin-top: 20px;
-height: 30px;
-transform:translateX(135px);
-border-radius: 4px;
-}
-
-#iconsonbar{
-    transform: translateY(-12px);
-    margin-bottom: 7px;
-
-}
-
-#Textonbar a{
-    margin-bottom: 5px;
-    display: flex;
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    text-decoration: none;
+.Tools:hover {
     transform: translateY(-5px);
-  
+    border-color: rgb(145, 218, 235);
 }
 
-#Textonbar:hover {
-  background-color: #0d2735;
-  color: rgb(163, 253, 245);
+#icons{
+    height: 40px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 50%;
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -260px;
+    }
+    
+    .sidebar:not(.close) {
+        left: 0;
+    }
+    
+    .navbar,
+    .main {
+        left: 0;
+        width: 100%;
+    }
+    
+    #tools-container {
+        padding: 0 10px;
+    }
 }
