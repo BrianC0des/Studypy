@@ -10,10 +10,16 @@
   position: fixed;
   height: 100%;
   width: 260px;
-  background: #000000;
+  background: #121216;
   padding: 15px;
   z-index: 99;
+  border-right: 1px solid #29292D;
 }
+
+
+
+
+
 .logo {
   font-size: 25px;
   padding: 0 15px;
@@ -27,11 +33,37 @@
   height: 100%;
   width: 100%;
   margin-top: 40px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
+
+/*Scroll Bar Design*/
+.menu-content::-webkit-scrollbar {
+  width: 2px;
+  height: 5px;
+}
+
+.menu-content::-webkit-scrollbar-track {
+  background: #000000;
+  border-radius: 5px;
+}
+
+.menu-content::-webkit-scrollbar-thumb {
+  background: rgb(14, 73, 100);
+  border-radius: 10px;
+}
+
+.menu-content::-webkit-scrollbar-thumb:hover {
+  background: rgb(145, 218, 235);
+}
+
+
+/*
 .menu-content::-webkit-scrollbar {
   display: none;
 }
+*/
+
 .menu-items {
   height: 100%;
   width: 100%;
@@ -74,9 +106,10 @@
   width: 100%;
   top: 0;
   right: calc(-100% - 26px);
-  height: calc(100% + 100vh);
-  background: #000000;
+  background:#121216;
   display: none;
+  overflow-y: auto; /* Add this */
+  overflow-x: hidden; /* Add this */
 }
 .show-submenu ~ .submenu {
   display: block;
@@ -84,6 +117,10 @@
 .submenu .menu-title {
   border-radius: 12px;
   cursor: pointer;
+  position: sticky; /* Add this */
+  top: 0; /* Add this */
+  background: #121216; /* Add this to match submenu background */
+  z-index: 10; /* Add this to keep it above other items */
 }
 .submenu .menu-title i {
   margin-right: 10px;
@@ -105,7 +142,7 @@
   color: #fff;
   padding: 15px 20px;
   font-size: 25px;
-  background: #000000;
+  background: #121216;
   cursor: pointer;
 }
 .navbar #sidebar-close {
@@ -118,8 +155,8 @@
   min-height: 100vh;  
   padding: 80px 20px 20px;
   z-index: 100;
-  background: #000000;
-  overflow-y: auto;
+  background: #16171B;
+  overflow-y: visible;
 }
 
 .main h1 {
@@ -174,7 +211,7 @@
     display: block;
     margin: 10px auto 0;
     border-radius: 50%;
-
+}
 
 @media (max-width: 768px) {
     .sidebar {
