@@ -19,9 +19,8 @@
 
 
 
-
 .logo {
-  font-size: 25px;
+  font-size: 21px;
   padding: 0 15px;
 }
 .sidebar a {
@@ -164,6 +163,15 @@
   font-size: 40px;
   text-align: center;
 }
+
+
+footer {
+  text-align: center;
+  color: white;
+  
+}
+
+
 
 #title{
     color: aliceblue;
