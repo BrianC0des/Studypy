@@ -21,7 +21,7 @@ h5{
   border-right: 1px solid #29292D;
 }
 .logo {
-  font-size: 25px;
+  font-size: 21px;
   padding: 0 15px;
 }
 .sidebar a {
@@ -164,6 +164,15 @@ h5{
   font-size: 40px;
   text-align: center;
 }
+
+
+footer {
+  text-align: center;
+  color: white;
+  
+}
+
+
 
 #title{
     color: aliceblue;
