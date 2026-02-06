@@ -108,8 +108,8 @@ h5{
   right: calc(-100% - 26px);
   background:#121216;
   display: none;
-  overflow-y: auto; /* Add this */
-  overflow-x: hidden; /* Add this */
+  overflow-y: auto;
+  overflow-x: hidden; 
 }
 .show-submenu ~ .submenu {
   display: block;
@@ -117,10 +117,10 @@ h5{
 .submenu .menu-title {
   border-radius: 12px;
   cursor: pointer;
-  position: sticky; /* Add this */
-  top: 0; /* Add this */
-  background: #121216; /* Add this to match submenu background */
-  z-index: 10; /* Add this to keep it above other items */
+  position: sticky;
+  top: 0;
+  background: #121216;
+  z-index: 10;
 }
 .submenu .menu-title i {
   margin-right: 10px;
