@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sidebar Menu for Admin Dashboard | CodingNepal</title>
+    <title> Studypy - Alpha </title>
     <link rel="stylesheet" href="../../styles/style.css" />
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
@@ -196,13 +196,26 @@
             </ul>
           </li>
           
-        </ul>
+        </ul> 
       </div>
     </nav>
     <nav class="navbar">
       <i class="fa-solid fa-bars" id="sidebar-close"></i>
     </nav>
     <main class="main">
+      <div id = "searchbar">
+        <label for="searchbar" style=" color:white;"> Search </label>
+        <input type="text" name="search" id="text">
+
+      </div>
+      <br>
+      <div id = "filter">
+        <button oneclick="filterGenre('all')" >All </button>
+        <button oneclick="filterGenre('html')" > HTML </button>
+        <button oneclick="filter('CSS')" >  CSS </button>
+        
+      </div>
+        <br> <hr> <br>
         <div id = "tools-container">
                   <div class = "Tools">
                       <a id = "links" href="https://www.youtube.com/embed/gQojMIhELvM" target="_blank" title = "WebDev Ep1">
@@ -296,95 +309,7 @@
                     </h5>
                     <img id = "icons" src="assets/icons/Ai-icon.png" alt="Webdev" title="Ai and Machine icon">
                 </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://www.refactoringui.com/" target="_blank" title = "Refactoring UI Website">
-                    <h2> Refactoring UI</h2>
-                    </a>
-                    <iframe width="100" height="150" src=" LINK HERE " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <br>
-                    <h5> Learn to design beautiful user interfaces by yourself using design principles.</h5>
-                    <img id = "icons" src="assets/icons/UX.jpg" alt="Webdev" title="UI and UX icon">
-                </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://reactnative.dev/" target="_blank" title = "React Native Website">
-                    <h2> React Native Docs</h2>
-                    </a>
-                    <h5> Official documentation for building native mobile apps with React.</h5>
-                    <img id = "icons" src="assets/icons/Phone.webp" alt="Webdev" title="Mobile Dev icon">
-                </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://flutter.dev/?utm_source=google&utm_medium=cpc&utm_campaign=brand_sem&utm_content=apac_apac&gclsrc=aw.ds&gad_source=1&gad_campaignid=13034410756&gbraid=0AAAAAC-INI9d83Si3v4QacHobhx4zCvrQ&gclid=Cj0KCQiAxonKBhC1ARIsAIHq_lvVZEiXPH0fX1jW2zldJdHyf8WK0BduDFWh0OW0WPwPZiC3z3YsckIaAkOeEALw_wcB" target="_blank" title = "Flutter Doc Website">
-                    <h2> Flutter Documentation</h2>
-                    </a>
-                    <h5> Google's UI toolkit for building beautiful apps for mobile, web, and desktop.</h5>
-                    <img id = "icons" src="assets/icons/Phone.webp" alt="Webdev" title="Mobile Dev icon">
-                </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://docs.docker.com/" target="_blank" title = "Docker Documentation Website">
-                    <h2> Docker Documentation</h2>
-                    </a>
-                    <h5> Learn containerization with Docker - essential for modern development.</h5>
-                    <img id = "icons" src="assets/icons/cloud.webp" alt="Webdev" title="Cloud and DevOps icon">
-                </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://kubernetes.io/docs/tutorials/kubernetes-basics/" target="_blank" title = "Kubernetes Website">
-                    <h2> Kubernetes Basics</h2>
-                    </a>
-                    <h5> Official Kubernetes tutorials for container orchestration.</h5>
-                    <img id = "icons" src="assets/icons/cloud.webp" alt="Webdev" title="Cloud and DevOps icon">
-                </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://lawsofux.com/" target="_blank" title = "Laws of UX Website">
-                    <h2> Laws of UX</h2>
-                    </a>
-                    <h5> Collection of design principles and maxims for creating better user experiences.</h5>
-                    <img id = "icons" src="assets/icons/UX.jpg" alt="Webdev" title="UI and UX icon">
-                </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://cs50.harvard.edu/x/" target="_blank" title = "CS50X Website">
-                    <h2> CS50x</h2>
-                    </a>
-                    <h5> Harvard's introduction to computer science - one of the best CS courses available.</h5>
-                    <img id = "icons" src="assets/icons/Cs.jpg" alt="Webdev" title="CompSci icon">
-                </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://www.cs.mcgill.ca/~akroit/math/compsci/Cormen%20Introduction%20to%20Algorithms.pdf" target="_blank" title = "CLRS Algorithms pdf">
-                    <h2> CLRS Algorithms</h2>
-                    </a>
-                    <h5> Introduction to Algorithms - the classic algorithms textbook.</h5>
-                    <img id = "icons" src="assets/icons/Cs.jpg" alt="Webdev" title="CompSci icon">
-                </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://the-algorithms.com/" target="_blank" title = "The Algorithms Website">
-                    <h2> The Algorithms</h2>
-                    </a>
-                    <h5> Open source repository with algorithm implementations in multiple languages.</h5>
-                    <img id = "icons" src="assets/icons/Cs.jpg" alt="Webdev" title="CompSci icon">
-                </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://leetcode.com/" target="_blank" title = "Leet Code Website">
-                    <h2> LeetCode</h2>
-                    </a>
-                    <h5> Practice coding interview questions with detailed solutions and discussions.</h5>
-                    <img id = "icons" src="assets/icons/briefcase.jpg" alt="Webdev" title="Interview preparation icon">
-                </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://www.techinterviewhandbook.org/" target="_blank" title = "Tech Interview Handbook Website">
-                    <h2> Tech Interview Handbook</h2>
-                    </a>
-                    <h5> Curated coding interview preparation materials for busy engineers.</h5>
-                    <img id = "icons" src="assets/icons/briefcase.jpg" alt="Webdev" title="Interview preparation icon">
-                </div>
-                <div class = "Tools">
-                    <a id = "links" href="https://systemdesignschool.io/primer" target="_blank" title = "System Design Primer Website">
-                    <h2> System Design Primer</h2>
-                    </a>
-                    <h5> Learn how to design large-scale systems. Prep for system design interviews.</h5>
-                    <img id = "icons" src="assets/icons/briefcase.jpg" alt="Webdev" title="Interview preparation icon">
-                </div>
-            </div>
     </main>
-
     <script src="../../js/home.js"></script>
   </body>
 </html>

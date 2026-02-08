@@ -157,3 +157,320 @@
                 </div>
             </div>
     </main>
+
+
+
+    <!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Menu for Admin Dashboard | CodingNepal</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  </head>
+  <body>
+    <nav class="sidebar">
+      <a href="#" class="logo">Studypy</a>
+      <div class="menu-content">
+        <ul class="menu-items">
+          <li class="item">
+            <a href="../../index.html">Home</a>
+          </li>
+          <li class="item">
+            <a href="#">About</a>
+          </li>
+          <div class="menu-title">Links & Resources</div>
+          <li class="item">
+            <div class="submenu-item">
+              <span>Learning Platforms</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Learning Platforms
+              </div>
+              <li class="item">
+                <a href="Online Courses.html">Online Courses</a>
+              </li>
+              <li class="item">
+                <a href="Interactive Coding.html">Interactive Coding</a>
+              </li>
+              <li class="item">
+                <a href="Video Tutorials.html">Video Tutorials</a>
+              </li>
+              <li class="item">
+                <a href="Book and eBooks.html">Books & eBooks</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="submenu-item">
+              <span>Coding Practice</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Coding Practice
+              </div>
+                <li class="item">
+                  <a href="#">Algorithm Problems</a>
+                </li>
+                <li class="item">
+                  <a href="#">Web Challenges</a>
+                </li>
+                <li class="item">
+                  <a href="#">Competetive Coding</a>
+                </li>
+                <li class="item">
+                  <a href="#">Math & Logic</a>
+                </li>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="submenu-item">
+              <span>Documentation</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Documentation
+              </div>
+              <li class="item">
+                <a href="#">Language Docs</a>
+              </li>
+              <li class="item">
+                <a href="#">Framework Docs</a>
+              </li>
+              <li class="item">
+                <a href="#">API References</a>
+              </li>
+              <li class="item">
+                <a href="#">Cheat Sheets</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="submenu-item">
+              <span>Development Tools</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Development Tools
+              </div>
+              <li class="item">
+                <a href="#">Code Editors</a>
+              </li>
+              <li class="item">
+                <a href="#">Version Control</a>
+              </li>
+              <li class="item">
+                <a href="#">Collaboration Tools</a>
+              </li>
+              <li class="item">
+                <a href="#">Testing Tools</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="submenu-item">
+              <span>CS Fundamentals</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                CS Fundamentals
+              </div>
+              <li class="item">
+                <a href="#">Data Structures & Algorithms</a>
+              </li>
+              <li class="item">
+                <a href="#">System Design</a>
+              </li>
+              <li class="item">
+                <a href="#">Operating Systems</a>
+              </li>
+              <li class="item">
+                <a href="#">Cyber Security</a>
+              </li>
+              <li class="item">
+                <a href="#">Networking</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="submenu-item">
+              <span>Career Resources</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Career Resources
+              </div>
+              <li class="item">
+                <a href="#">Interview Prep</a>
+              </li>
+              <li class="item">
+                <a href="#">Resume Builders</a>
+              </li>
+              <li class="item">
+                <a href="#">Job Boards</a>
+              </li>
+              <li class="item">
+                <a href="#">Salary Info</a>
+              </li>
+              <li class="item">
+                <a href="#">Tech News</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="submenu-item">
+              <span>Communities</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Communities
+              </div>
+                <li class="item">
+                  <a href="#">Forums</a>
+                </li>
+                <li class="item">
+                  <a href="#">Social Platforms</a>
+                </li>
+                <li class="item">
+                  <a href="#">Discord Servers</a>
+                </li>
+              </li>
+            </ul>
+          </li>
+          
+        </ul> 
+      </div>
+    </nav>
+    <nav class="navbar">
+      <i class="fa-solid fa-bars" id="sidebar-close"></i>
+    </nav>
+    <main class="searchbar">
+      <div id = "searchbar">
+        <label for="searchbar"> Search </label>
+        <input type="text" name="search" id="text">
+
+      </div>
+      <div id = "filter">
+        <button oneclick="filterGenre('all')" >All </button>
+        <button oneclick="filterGenre('html')" > HTML </button>
+        <button oneclick="filter('CSS')" >  CSS </button>
+        
+      </div>
+        <br> <hr> <br>
+        <div id = "tools-container">
+                  <div class = "Tools">
+                      <a id = "links" href="https://www.youtube.com/embed/gQojMIhELvM" target="_blank" title = "WebDev Ep1">
+                      <h2> HTML Tutorial for Beginners </h2>
+                      </a>
+                      <iframe width="230" height="150" src="https://www.youtube.com/embed/RjHflb-QgVc?si=kHvF9bSi_eL12-aO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      <br>
+                      <h5> Learn HTML FAST from a professional developer.  This course will get you into the career of web development.  You'll learn HTML, CSS, & Javascript using modern tools so you won't be embarrassed on your first job interview!</h5>
+                      <img id = "icons" src="assets/icons/Mdm.png" alt="Webdev" title="Webdev icon">
+                  </div>
+                <div class = "Tools">
+                    <a id = "links" href="https://www.youtube.com/embed/gQojMIhELvM?si=WWjK7YIQ4uQApkz4" target="_blank" title = "Web Dev Ep2">
+                    <h2> Web Development For Beginners </h2>
+                    </a>
+                    <iframe width="230" height="150" src="https://www.youtube.com/embed/gQojMIhELvM?si=WWjK7YIQ4uQApkz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <br>
+                    <h5> Learn Web Dev the way professionals do! This FULL course covers it all.  We'll learn HTML, CSS, Javascript and the workspace/computer setup that professionals use. </h5>
+                    <img id = "icons" src="assets/icons/webdev.jpg" alt="Webdev" title="Webdev icon">
+                </div>
+                <div class = "Tools">
+                    <a id = "links" href="https://www.youtube.com/embed/J35jug1uHzE?si=WHSP3_nxlSLrykbl" target="_blank" title = "Web Dev Ep3">
+                    <h2> HTML CSS Tutorial for Beginners </h2>
+                    </a>
+                    <iframe width="230" height="150" src="https://www.youtube.com/embed/J35jug1uHzE?si=WHSP3_nxlSLrykbl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <br>
+                    <h5> This video makes how CSS works easy to understand...it's just styles added to your page.  You can do a lot with them, but at the end of the day, there's very little you have to know about CSS itself to start using it.</h5>
+                    <img id = "icons" src="assets/icons/webdev.jpg" alt="Webdev" title="Webdev icon">
+                </div>
+                <div class = "Tools">
+                    <a id = "links" href="https://www.youtube.com/embed/dMK_3lH1YPo?si=RZr6B0CLmZZ0K4SS" target="_blank" title = "Web Dev Ep4">
+                    <h2> Hand-code an HTML + CSS Layout </h2>
+                    </a>
+                    <iframe width="230" height="150" src="https://www.youtube.com/embed/dMK_3lH1YPo?si=RZr6B0CLmZZ0K4SS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <br>
+                    <h5> In this web development tutorial for beginners series, we're learning html and css from the very beginning.  We'll learn by building a website from scratch rather than doing a separate html tutorial for beginners an css tutorial for beginners. We'll learn about div tags and semantic tags that we can use in the place of div tags to make our html more readable.
+                    </h5>
+                    <img id = "icons" src="assets/icons/webdev.jpg" alt="Webdev" title="Webdev icon">
+                </div>
+                <div class = "Tools">
+                    <a id = "links" href="https://www.youtube.com/embed/aRMIdKRYg6c?si=NDmkntZZSMkoQnZ4" target="_blank" title = "Web Dev Ep5">
+                    <h2> Build an HTML + CSS Layout with Flexbox </h2>
+                    </a>
+                    <iframe width="230" height="150" src="https://www.youtube.com/embed/aRMIdKRYg6c?si=NDmkntZZSMkoQnZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <br>
+                    <h5> Building an HTML + CSS Layout is the first core skill you learn in web development. This course of web development tutorials for beginners will show you how to build an HTML CSS Layout, then add content with HTML CSS content blocks, which is where you learn all the tips and tricks it takes to build a website.</h5>
+                    <img id = "icons" src="assets/icons/Gearicon.png" alt="Webdev" title="Programming Language icon">
+                </div>
+                <div class = "Tools">
+                    <a id = "links" href="https://www.youtube.com/embed/iXSSHlOe47s?si=NPDPFK1tD1Y4eAtp" target="_blank" title = "Web Dev Ep6">
+                    <h2> HTML CSS Tutorial for Beginners - Multple Pages </h2>
+                    </a>
+                    <iframe width="230" height="150" src="https://www.youtube.com/embed/iXSSHlOe47s?si=NPDPFK1tD1Y4eAtp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <br>
+                    <h5> In HTML, when referencing a file, beginners tend to make 2 mistakes - they don't spell the file name right (or use capital/lowercase letters on accident) OR, they don't point to the right location for the HTML/CSS file.  If the HTML or CSS file is in a folder, you need to reference the folder as well.</h5>
+                    <img id = "icons" src="assets/icons/Gearicon.png" alt="Webdev" title="Programming Language icon">
+                </div>
+                <div class = "Tools">
+                    <a id = "links" href="https://www.youtube.com/embed/dcCCOiQ1ZuM?si=KdHcFfjDKHgHvhyl" target="_blank" title = "Web Dev Ep7">
+                    <h2> HTML CSS Tutorial for Beginners - CCS Selectors </h2>
+                    </a>
+                    <iframe width="230" height="150" src="https://www.youtube.com/embed/dcCCOiQ1ZuM?si=KdHcFfjDKHgHvhyl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <br>
+                    <h5> Using CSS selectors are the bread and butter of HTML and CSS coding.  You have to think about what elements on your page you want to target and how to write rules that cleanly target and apply css styling to those elements. </h5>
+                    <img id = "icons" src="assets/icons/Gearicon.png" alt="Webdev" title="Programming Language icon">
+                </div>
+                <div class = "Tools">
+                    <a id = "links" href="https://www.youtube.com/embed/7cwRaTqR4k0?si=W2-zx3r6zEDwRLJh" target="_blank" title = "Web Dev Ep8">
+                    <h2> HTML & CSS Tutorial - Coding Images </h2>
+                    </a>
+                    <iframe width="230" height="150" src="https://www.youtube.com/embed/7cwRaTqR4k0?si=W2-zx3r6zEDwRLJh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <br>
+                    <h5> Here's how to properly code images into your webpages without making them fuzzy on hi-res devices like the latest iPhone. </h5>
+                    <img id = "icons" src="assets/icons/Ai-icon.png" alt="Webdev" title="Ai and Machine icon">
+                </div>
+                <div class = "Tools">
+                    <a id = "links" href="https://www.youtube.com/embed/fgOO9YUFlGI?si=X-xZcZFIev0YXJPT" target="_blank" title = "Web Dev Ep9">
+                    <h2> Responsive Design Tutorial - HTML Beginner Tutorial </h2>
+                    </a>
+                    <iframe width="230" height="150" src="https://www.youtube.com/embed/fgOO9YUFlGI?si=X-xZcZFIev0YXJPT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <br>
+                    <h5> Responsive Design makes a website look amazing on any device.  Using css media queries, good flexbox/grid layouts, srcset, and html5 picture tags, we can convert our website into a fully responsive site. </h5>
+                    <img id = "icons" src="assets/icons/Ai-icon.png" alt="Webdev" title="Ai and Machine icon">
+                </div>
+                <div class = "Tools">
+                    <a id = "links" href="https://www.youtube.com/embed/5iUB31h2Hzs?si=zY-dObHfw4bTRkoL" target="_blank" title = "Scikit Learn Website">
+                    <h2> HTML & CSS Beginner's Tutorial - Domain Registration </h2>
+                    </a>
+                    <iframe width="230" height="150" src="https://www.youtube.com/embed/5iUB31h2Hzs?si=zY-dObHfw4bTRkoL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <br>
+                    <h5> If you already know HTML and CSS, putting your website online is easy: just register a domain and connect it to a web host. HostGator is a beginner-friendly option because it’s simple to use, affordable, quick to set up, and offers 24/7 support.
+                    </h5>
+                    <img id = "icons" src="assets/icons/Ai-icon.png" alt="Webdev" title="Ai and Machine icon">
+                </div>
+    </main>
+    <script src="../../js/home.js"></script>
+  </body>
+</html>

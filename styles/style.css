@@ -60,6 +60,15 @@
 }
 */
 
+button {
+    background-color: #29292D;
+    height: 30px;
+    width: 60px;
+    border-radius: 10px;
+    border-collapse: collapse;
+    color:#fff;
+}
+
 .menu-items {
   height: 100%;
   width: 100%;
@@ -145,7 +154,6 @@
   cursor: pointer;
 }
 
-
 .main {
   position: relative;
   min-height: 100vh;  
@@ -227,4 +235,11 @@
     #tools-container {
         padding: 0 10px;
     }
+}
+
+#searchbar{
+    padding:5px;
+    text-align: center;
+    border:#000000;
+    
 }
