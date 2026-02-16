@@ -237,9 +237,56 @@ button {
     }
 }
 
+--> Search Bar & Filter Function by #Sato
 #searchbar{
     padding:5px;
     text-align: center;
     border:#000000;
-    
+}
+
+#controls { 
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:12px; 
+  align-items:center; 
+  justify-content:center; 
+  margin-bottom:8px; 
+}
+
+#searchbar input[type="search"]{ 
+  padding:8px 12px; 
+  border-radius:8px; 
+  border:1px solid #294a51; 
+  background:#0b1a1b; 
+  color:#fff; 
+  width:320px; 
+  max-width:90%; 
+}
+
+#genre-filter{ padding:6px 10px; 
+  border-radius:8px; 
+  border:1px solid #294a51; 
+  background:#0b1a1b; 
+  color:#fff; 
+}
+
+#filter label{ 
+  margin-right:6px; 
+}
+
+#clear-filters{ 
+  margin-left:8px; 
+  background:transparent; 
+  border:1px solid #294a51; 
+  padding:6px 8px; 
+  color:#fff; 
+  border-radius:8px; 
+  cursor:pointer; 
+}
+
+#no-results{ 
+  color:#fff; 
+  padding:20px; 
+  font-size:16px; 
+  text-align:center; 
 }
