@@ -178,43 +178,105 @@ button {
 }
 
 #tools-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1400px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  /* make grid rows equal height so cards align uniformly */
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6px;
 }
 
 
 #links{
-    color: aliceblue;
-    display: block;
-    text-decoration: none;
-} 
+    display: none;
+}
+/* Use .card-link for title links inside cards */
+.card-link{
+  color: aliceblue;
+  display: block;
+  text-decoration: none;
+}
 
 .Tools{
-    border: 1px solid rgb(14, 73, 100); 
-    padding: 20px; 
-    color: rgb(145, 218, 235);
-    background-color: #060e11;
-    border-radius: 20px;
-    max-width: 270px;
-    width: 100%;
-    text-align: left;
-    margin: 10px;
-    transition: transform 0.2s, border-color 0.2s;
+  border: 1px solid rgba(14,73,100,0.35);
+  padding: 14px;
+  color: rgb(145, 218, 235);
+  background: linear-gradient(180deg, rgba(6,10,12,0.55), rgba(3,6,8,0.55));
+  border-radius: 14px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  /* fill the grid cell so all cards in a row match height */
+  height: 100%;
 }
 
 .Tools:hover {
-    transform: translateY(-5px);
-    border-color: rgb(145, 218, 235);
+  transform: translateY(-5px);
+  border-color: rgb(145, 218, 235);
 }
 
-#icons{
-    height: 40px;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 50%;
+/* Make embedded videos responsive and consistent */
+.video-preview{ width:100%; overflow:hidden; border-radius:12px; background:#000; flex:0 0 auto; }
+.video-preview iframe{ width:100%; height:100%; aspect-ratio:16/9; border-radius:12px; border:0; display:block; }
+
+/* Ensure the title link fills the row and inherits card colors */
+.Tools > .card-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.Tools h2 {
+  font-size: 18px;
+  margin: 0;
+  color: #dff7fb;
+  line-height: 1.15;
+  text-align: left;
+  letter-spacing: -0.2px;
+}
+
+.Tools h5 {
+  font-size: 12px; /* slightly reduced to keep cards compact */
+  color: #9bc3e3;
+  line-height: 1.4;
+  margin: 6px 0 0;
+  /* clamp description to 3 lines to keep card heights consistent */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.Tools:hover{ transform: translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,8,0.6); border-color: rgba(145,218,235,0.18); }
+
+/* Icon styling and bottom alignment */
+.Tools .card-icon {
+  height: 48px;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 8px;
+  /* stick icon to bottom so cards align visually */
+  margin-top: auto;
+}
+
+@media (max-width: 480px) {
+  .Tools { min-height: auto; }
+  .Tools h2 { font-size: 16px; }
+  .Tools h5 { font-size: 12px; }
+}
+
+.card-icon{
+  height: 40px;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
@@ -237,56 +299,106 @@ button {
     }
 }
 
---> Search Bar & Filter Function by #Sato
+/* Search Bar & Filter */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 10px 16px; /* reduced horizontal padding so content centers naturally */
+  border-radius: 12px;
+  border: 1px solid rgba(41, 74, 81, 0.18);
+  max-width: 980px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+}
+
 #searchbar{
-    padding:5px;
-    text-align: center;
-    border:#000000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 28px; /* increased horizontal padding for larger background */
+  flex: 0 0 auto; /* don't stretch to full width */
+  max-width: 720px; /* limit width so it stays centered */
+  margin: 0 auto; /* center inside #controls */
+  align-self: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(5,30,32,0.45), rgba(8,20,22,0.35));
+  border: 1px solid rgba(41,74,81,0.6);
 }
 
-#controls { 
-  display:flex; 
-  flex-wrap:wrap; 
-  gap:12px; 
-  align-items:center; 
-  justify-content:center; 
-  margin-bottom:8px; 
+#searchbar label{ color:#dff7fb; font-weight:500; font-size:14px; margin:0 6px; }
+
+#searchbar input[type="search"]{
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  width: 320px;
+  max-width: 60vw;
+  outline: none;
+  transition: box-shadow .18s ease, width .18s ease;
 }
 
-#searchbar input[type="search"]{ 
-  padding:8px 12px; 
-  border-radius:8px; 
-  border:1px solid #294a51; 
-  background:#0b1a1b; 
-  color:#fff; 
-  width:320px; 
-  max-width:90%; 
+#searchbar input[type="search"]:focus{
+  box-shadow: 0 0 0 3px rgba(41,74,81,0.14);
+  width: 420px;
+  max-width: 80vw;
 }
 
-#genre-filter{ padding:6px 10px; 
-  border-radius:8px; 
-  border:1px solid #294a51; 
-  background:#0b1a1b; 
-  color:#fff; 
+#genre-filter{
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(41,74,81,0.6);
+  background: linear-gradient(180deg, rgba(11,26,27,0.95), rgba(8,18,19,0.95));
+  color: #dff7fb;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-#filter label{ 
-  margin-right:6px; 
+/* Ensure dropdown options are readable on most browsers */
+#genre-filter option{
+  background: #0b1a1b;
+  color: #dff7fb;
 }
 
-#clear-filters{ 
-  margin-left:8px; 
-  background:transparent; 
-  border:1px solid #294a51; 
-  padding:6px 8px; 
-  color:#fff; 
-  border-radius:8px; 
-  cursor:pointer; 
+#filter label{ margin-right:6px; color:#dff7fb; font-weight:500; }
+
+#clear-filters{
+  margin-left:8px;
+  background: transparent;
+  border: 1px solid rgba(41,74,81,0.6);
+  padding: 8px 12px;
+  color: #fff;
+  border-radius:8px;
+  cursor: pointer;
+  transition: background .12s, transform .08s;
 }
 
-#no-results{ 
-  color:#fff; 
-  padding:20px; 
-  font-size:16px; 
-  text-align:center; 
+#clear-filters:hover{ background: rgba(41,74,81,0.12); transform: translateY(-1px); }
+
+#no-results{
+  color:#fff;
+  padding:20px;
+  font-size:16px;
+  text-align:center;
 }
+
+@media (max-width:480px) {
+  #searchbar input[type="search"]{ width:180px; }
+  #controls{ padding:8px; gap:8px; }
+}
+
+/* Category badges for Tools cards */
+.tools-badges{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:6px; }
+.badge{ display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:600; text-transform:capitalize; }
+.badge--primary{ background: linear-gradient(90deg,#193940,#0b2a2b); color:#dff7fb; border:1px solid rgba(145,218,235,0.08); }
+.badge--sub{ background: rgba(255,255,255,0.02); color:#9bc3e3; border:1px solid rgba(41,74,81,0.08); }
+
+/* small layout tweak so badges and title sit nicely */
+.Tools .tools-badges + .card-link h2{ margin-top:6px; }

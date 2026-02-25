@@ -29,6 +29,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const tools = Array.from(document.querySelectorAll('.Tools'));
   const noResults = document.getElementById('no-results');
 
+  // Inject category badges into each tool card based on data-genres
+  function renderBadges() {
+    tools.forEach(el => {
+      // avoid duplicate badges on re-run
+      if (el.querySelector('.tools-badges')) return;
+      const data = (el.dataset.genres || 'uncategorized').toLowerCase();
+      const parts = data.split(',').map(s => s.trim()).filter(Boolean);
+      const container = document.createElement('div');
+      container.className = 'tools-badges';
+
+      // primary badge = first item
+      const primary = document.createElement('span');
+      primary.className = 'badge badge--primary';
+      primary.textContent = parts[0] ? parts[0].replace(/\b\w/g, c => c.toUpperCase()) : 'General';
+      container.appendChild(primary);
+
+      // sub badges
+      parts.slice(1).forEach(sub => {
+        const subBadge = document.createElement('span');
+        subBadge.className = 'badge badge--sub';
+        subBadge.textContent = sub.replace(/\b\w/g, c => c.toUpperCase());
+        container.appendChild(subBadge);
+      });
+
+      // insert badges at top of card, before the title link if present
+      const titleLink = el.querySelector('.card-link');
+      if (titleLink) el.insertBefore(container, titleLink);
+      else el.prepend(container);
+    });
+  }
+
+  renderBadges();
+
   function normalize(text = '') {
     return text.toString().toLowerCase().trim();
   }
