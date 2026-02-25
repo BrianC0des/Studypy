@@ -400,5 +400,5 @@ button {
 .badge--primary{ background: linear-gradient(90deg,#193940,#0b2a2b); color:#dff7fb; border:1px solid rgba(145,218,235,0.08); }
 .badge--sub{ background: rgba(255,255,255,0.02); color:#9bc3e3; border:1px solid rgba(41,74,81,0.08); }
 
-/* small layout tweak so badges and title sit nicely */
+/* small layout tweak  */
 .Tools .tools-badges + .card-link h2{ margin-top:6px; }
