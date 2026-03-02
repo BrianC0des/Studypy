@@ -1,256 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-   <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Studypy</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <nav class="sidebar">
-      
-      <a href="#" class="logo">Home</a>
-      <div class="menu-content">
-        <ul class="menu-items">
-          <li class="item">
-            <a href="#"><i class=" fa-solid fa-home"></i>Home</a>
-          </li>
-          <li class="item">
-            <a href="#about"><i class="fa-solid fa-info-circle"></i>About</a>
-          </li>
-          <div class="menu-title">Links & Resources</div>
-          <li class="item">
-            <div class="submenu-item"> 
-              <span><i class="sidebar-icons fa-solid fa-graduation-cap"></i>Learning Platforms</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <ul class="menu-items submenu">
-              <div class="menu-title">
-                <i class="fa-solid fa-chevron-left"></i>
-                Learning Platforms
-              </div>
-              <li class="item">
-                <a href="pages/Learning-Platforms/Online Courses.html">Online Courses</a>
-              </li>
-              <li class="item">
-                <a href="pages/Learning-Platforms/Interactive Coding.html">Interactive Coding</a>
-              </li>
-              <li class="item">
-                <a href="pages/Learning-Platforms/Video Tutorials.html">Video Tutorials</a>
-              </li>
-              <li class="item">
-                <a href="pages/Learning-Platforms/Book and eBooks.html">Books & eBooks</a>
-              </li>
-            </ul>
-          </li>
-          <li class="item">
-            <div class="submenu-item">
-              <span><i class="sidebar-icons fa-solid fa-code"></i>Coding Practice</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <ul class="menu-items submenu">
-              <div class="menu-title">
-                <i class="fa-solid fa-chevron-left"></i>
-                Coding Practice
-              </div>
-                <li class="item">
-                  <a href="#">Algorithm Problems</a>
-                </li>
-                <li class="item">
-                  <a href="#">Web Challenges</a>
-                </li>
-                <li class="item">
-                  <a href="#">Competetive Coding</a>
-                </li>
-                <li class="item">
-                  <a href="#">Math & Logic</a>
-                </li>
-              </li>
-            </ul>
-          </li>
-          <li class="item">
-            <div class="submenu-item">
-              <span><i class="sidebar-icons fa-solid fa-book"></i>Documentation</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <ul class="menu-items submenu">
-              <div class="menu-title">
-                <i class="fa-solid fa-chevron-left"></i>
-                Documentation
-              </div>
-              <li class="item">
-                <a href="#">Language Docs</a>
-              </li>
-              <li class="item">
-                <a href="#">Framework Docs</a>
-              </li>
-              <li class="item">
-                <a href="#">API References</a>
-              </li>
-              <li class="item">
-                <a href="#">Cheat Sheets</a>
-              </li>
-            </ul>
-          </li>
-          <li class="item">
-            <div class="submenu-item">
-              <span><i class="sidebar-icons fa-solid fa-wrench"></i>Development Tools</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <ul class="menu-items submenu">
-              <div class="menu-title">
-                <i class="fa-solid fa-chevron-left"></i>
-                Development Tools
-              </div>
-              <li class="item">
-                <a href="#">Code Editors</a>
-              </li>
-              <li class="item">
-                <a href="#">Version Control</a>
-              </li>
-              <li class="item">
-                <a href="#">Collaboration Tools</a>
-              </li>
-              <li class="item">
-                <a href="#">Testing Tools</a>
-              </li>
-            </ul>
-          </li>
-          <li class="item">
-            <div class="submenu-item"> 
-              <span><i class="sidebar-icons fa-solid fa-laptop-code"></i>CS Fundamentals</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <ul class="menu-items submenu">
-              <div class="menu-title">
-                <i class="fa-solid fa-chevron-left"></i>
-                CS Fundamentals
-              </div>
-              <li class="item">
-                <a href="#">Data Structures & Algorithms</a>
-              </li>
-              <li class="item">
-                <a href="#">System Design</a>
-              </li>
-              <li class="item">
-                <a href="#">Operating Systems</a>
-              </li>
-              <li class="item">
-                <a href="#">Cyber Security</a>
-              </li>
-              <li class="item">
-                <a href="#">Networking</a>
-              </li>
-            </ul>
-          </li>
-          <li class="item">
-            <div class="submenu-item">
-              <span><i class="sidebar-icons fa-solid fa-briefcase"></i>Career Resources</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <ul class="menu-items submenu">
-              <div class="menu-title">
-                <i class="fa-solid fa-chevron-left"></i>
-                Career Resources
-              </div>
-              <li class="item">
-                <a href="#">Interview Prep</a>
-              </li>
-              <li class="item">
-                <a href="#">Resume Builders</a>
-              </li>
-              <li class="item">
-                <a href="#">Job Boards</a>
-              </li>
-              <li class="item">
-                <a href="#">Salary Info</a>
-              </li>
-              <li class="item">
-                <a href="#">Tech News</a>
-              </li>
-            </ul>
-          </li>
-          <li class="item">
-            <div class="submenu-item">    
-              <span><i class="sidebar-icons fa-solid fa-globe"></i>Communities</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <ul class="menu-items submenu">
-              <div class="menu-title">
-                <i class="fa-solid fa-chevron-left"></i>
-                Communities
-              </div>
-                <li class="item">
-                  <a href="#">Forums</a>
-                </li>
-                <li class="item">
-                  <a href="#">Social Platforms</a>
-                </li>
-                <li class="item">
-                  <a href="#">Discord Servers</a>
-                </li>
-              </li>
-            </ul>
-          </li>
-          
-        </ul>
-      </div>
-    </nav>
-    <nav class="navbar">
-      <i class="fa-solid fa-bars" id="sidebar-close"></i>
-    </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Studypy</title>
+        <link rel="stylesheet" href="styles/sidebarstyle.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
 
-    <!-- Contents of Home Page -->
 
-    <main class="main">
-
-          <footer>
-              <div class="footer-container">
-                <div class="fbox">
-                    <h4>About us</h4>
-                    <ul class="list">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Dev Teams</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Products</a></li>
+        <!--TODO: Update the side bar with dropdown categories-->
+        <div class="sidebar close">
+            <div class="logo-details">
+                <span class="logo-name">Studypy</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#">
+                        <span class="link_name">Home</span>
+                    </a>
+                    <ul class="#">
+                      <span>Links and Resources</span>  
+                      
                     </ul>
-                </div>
-
-                <div class="fbox">
-                    <h4>Feedbacks</h4>
-                    <ul class="list">
-                    <li><a href="">Feedback form</a></li>
-                    <li><a href="mailto:bryansaavedrab272@gmail.com">Send Email</a></li>
+                </li>
+                <li>
+                  <div class="iocn-link">
+                        <a href="#">
+                            <i class='bx bx-collection' ></i>
+                            <span class="link_name"></span>
+                        </a>
+                        <i class='bx bxs-chevron-down arrow' ></i>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="#">Category</a></li>
+                        <li><a href="#">HTML & CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">PHP & MySQL</a></li>
                     </ul>
-                </div>
+                </li>
 
-                <div class="fbox">
-                    <h4>Contact Us</h4>
-                    <ul class="social-icons">
-                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
-                    <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-                    
-                </ul>
+
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+
+
+            </ul>
+
+
+        </div>
+
+
+        <!-- ? This is for navbar-->
+
+        <nav class="navbar">
+            <div class="logo-container">
+                <i class="fa-solid fa-bars" id="sidebar-close"></i>
+                <img src="assets/images/image.png" alt="Studypy Logo" class="logo-image">
+                <div class="logo-text">StudyPy</div>
+        </nav>
+
+        <!-- Contents of Home Page -->
+
+        <main class="main">
+
+
+            <!-- Hero/Home-->
+
+            <section id="home" class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-badge">Centralized collection of learning resources for IT/CS students</div>
+                        <h1>Learn, Code, <span class="hero-accent">Dominate!</span></h1>
+                        <p>Improve your coding/programming skills with us!!</p>
+                        <div class="cta-buttons">
+                            <a href="#about" class="btn btn-secondary"><span>Learn More</span></a>
+                        </div>
+                    </div>
                 </div>
-                
-                
-            </div>
-            <div class="footer-bottom">
+            </section>
+
+
+
+            <!-- About -->
+
+            <section id="about" class="about">
+                <div class="about-container">
+                    <div class="about-content reveal">
+                        <h2>What is StudyPy?</h2>
+                        <p>11111111111111111111111111111111111111111111111111ssssssssssssssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                        <p>111111111111111111111112222222222222222333333333344444444444444444455555555555555555656666666666666777777777777777</p>
+                    </div>
+                </div>
+                <div class="stats reveal">
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Sites to learn from</p>
+                    </div>
+                    <div class="stat">
+                        <h3>xxx+</h3>
+                        <p>Different ways to learn</p>
+                    </div>
+                    <div class="stat">
+                        <h3>xxx+</h3>
+                        <p>di kopa alam ano ilagay dito</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Foooter -->
+
+
+            <footer>
+                <div class="footer-container">
+                    <div class="fbox">
+                        <h4>About us</h4>
+                        <ul class="list">
+                            <li><a class ="Flink" href="https://www.youtube.com/embed/dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener noreferrer">Home</a></li>
+                            <li><a class ="Flink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener noreferrer">Dev Teams</a></li>
+                            <li><a class ="Flink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener noreferrer">Services</a></li>
+                            <li><a class ="Flink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener noreferrer">Products</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="fbox">
+                        <h4>Feedbacks</h4>
+                        <ul class="list">
+                            <li><a class ="Flink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener noreferrer">Feedback form</a></li>
+                            <li><a class ="Flink" href="mailto:tabidev404@gmail.com">Send Email</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="fbox">
+                        <h4>Contact Us</h4>
+                        <ul class="social-icons">
+                            <li><a class ="Flink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class ="Flink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class ="Flink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
+                            <li><a class ="Flink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
+
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="footer-bottom">
                     <p>&copy; 2027 Tabi Dev Studio . All rights reserved</p>
-            </div>
-       </footer>
-    </main>
+                </div>
+            </footer>
+        </main>
 
 
-    
 
-  
-    <script src="js/home.js"></script>
-  </body>
+
+
+
+
+        <script src="js/home.js">
+        </script>
+    </body>
 
 </html>
