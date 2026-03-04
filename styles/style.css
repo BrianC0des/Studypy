@@ -90,26 +90,6 @@ footer {
     border-radius: 50%;
 }
 
-@media (max-width: 768px) {
-    .sidebar {
-        left: -260px;
-    }
-    
-    .sidebar:not(.close) {
-        left: 0;
-    }
-    
-    .navbar,
-    .main {
-        left: 0;
-        width: 100%;
-    }
-    
-    #tools-container {
-        padding: 0 10px;
-    }
-}
-
 
 
 /*Logo and Name*/
