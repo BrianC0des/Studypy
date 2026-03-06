@@ -247,7 +247,7 @@ button {
   color: #9bc3e3;
   line-height: 1.4;
   margin: 6px 0 0;
-  /* clamp description to 3 lines to keep card heights consistent */
+  /* to keep card heights consistent */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
