@@ -1,9 +1,18 @@
 const sidebar = document.querySelector(".sidebar");
 
 if (sidebar) {
+  const syncSidebarState = () => {
+    document.body.classList.toggle("sidebar-collapsed", sidebar.classList.contains("close"));
+  };
+
+  syncSidebarState();
+
   const sidebarClose = document.querySelector("#sidebar-close");
   if (sidebarClose) {
-    sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
+    sidebarClose.addEventListener("click", () => {
+      sidebar.classList.toggle("close");
+      syncSidebarState();
+    });
   }
 
   // Keep compatibility with previous submenu markup if those nodes exist.
@@ -32,13 +41,21 @@ if (sidebar) {
     });
   }
 
-  const arrows = document.querySelectorAll(".arrow");
-  arrows.forEach((arrowEl) => {
-    arrowEl.addEventListener("click", (event) => {
-      const arrowParent = event.currentTarget.closest("li");
-      if (arrowParent) {
-        arrowParent.classList.toggle("showMenu");
+  const iocnLinks = document.querySelectorAll(".iocn-link");
+  iocnLinks.forEach((iocnLink) => {
+    const link = iocnLink.querySelector("a");
+    if (!link) {
+      return;
+    }
+
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const parentLi = iocnLink.closest("li");
+      if (!parentLi) {
+        return;
       }
+
+      parentLi.classList.toggle("showMenu");
     });
   });
 
@@ -46,6 +63,7 @@ if (sidebar) {
   if (sidebarBtn) {
     sidebarBtn.addEventListener("click", () => {
       sidebar.classList.toggle("close");
+      syncSidebarState();
     });
   }
 }
