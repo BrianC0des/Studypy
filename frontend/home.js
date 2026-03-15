@@ -1,69 +1,57 @@
 const sidebar = document.querySelector(".sidebar");
 
 if (sidebar) {
+  // Sync body class with current sidebar state
   const syncSidebarState = () => {
-    document.body.classList.toggle("sidebar-collapsed", sidebar.classList.contains("close"));
+    document.body.classList.toggle(
+      "sidebar-collapsed",
+      sidebar.classList.contains("close")
+    );
   };
 
+  // Apply correct class on first load
   syncSidebarState();
 
-  const sidebarClose = document.querySelector("#sidebar-close");
-  if (sidebarClose) {
-    sidebarClose.addEventListener("click", () => {
+  // Single toggle listener on the sidebar button
+  const sidebarToggle = document.querySelector(".sidebar-toggle");
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener("click", () => {
       sidebar.classList.toggle("close");
       syncSidebarState();
     });
   }
 
-  // Keep compatibility with previous submenu markup if those nodes exist.
-  const menu = document.querySelector(".menu-content");
-  const menuItems = document.querySelectorAll(".submenu-item");
-  const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
-
-  if (menu && menuItems.length && subMenuTitles.length) {
-    menuItems.forEach((item, index) => {
-      item.addEventListener("click", () => {
-        menu.classList.add("submenu-active");
-        item.classList.add("show-submenu");
-
-        menuItems.forEach((item2, index2) => {
-          if (index !== index2) {
-            item2.classList.remove("show-submenu");
-          }
-        });
-      });
-    });
-
-    subMenuTitles.forEach((title) => {
-      title.addEventListener("click", () => {
-        menu.classList.remove("submenu-active");
-      });
-    });
-  }
-
+  // ── Submenu: click to open/close (works in both expanded & collapsed states) ──
   const iocnLinks = document.querySelectorAll(".iocn-link");
+
   iocnLinks.forEach((iocnLink) => {
     const link = iocnLink.querySelector("a");
-    if (!link) {
-      return;
+    if (!link) return;
+
+    // Inject a chevron arrow icon if one isn't already there
+    if (!iocnLink.querySelector(".arrow")) {
+      const arrow = document.createElement("i");
+      arrow.className = "bx bxs-chevron-down arrow";
+      iocnLink.appendChild(arrow);
     }
 
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
+    // Toggle the parent <li>'s showMenu class on click
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
       const parentLi = iocnLink.closest("li");
-      if (!parentLi) {
-        return;
-      }
+      if (!parentLi) return;
 
-      parentLi.classList.toggle("showMenu");
+      const isOpen = parentLi.classList.contains("showMenu");
+
+      // Close all other open submenus first
+      document.querySelectorAll(".nav-links li.showMenu").forEach((li) => {
+        li.classList.remove("showMenu");
+      });
+
+      // Toggle current one
+      if (!isOpen) {
+        parentLi.classList.add("showMenu");
+      }
     });
   });
-
-  const sidebarBtn = document.querySelector(".sidebar-toggle");
-  if (sidebarBtn) {
-    sidebarBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("close");
-      syncSidebarState();
-    });
-  }
 }
