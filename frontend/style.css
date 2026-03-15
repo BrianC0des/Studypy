@@ -25,6 +25,7 @@
   --color-border-hover: var(--color-sky);
   --color-border-subtle: rgba(255, 255, 255, 0.1);
 
+
   /* Spacing */
   --space-xs:  0.5rem;
   --space-sm:  1rem;
@@ -33,15 +34,18 @@
   --space-xl:  5rem;
   --space-2xl: 8rem;
 
+
   /* Radius */
   --radius-sm:   10px;
   --radius-md:   20px;
   --radius-lg:   25px;
   --radius-pill: 50px;
 
+
   /* Typography */
   --font-main: "Poppins", sans-serif;
 
+  
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
@@ -78,6 +82,9 @@ ul {
   list-style: none;
 }
 
+
+
+
 /* ── Main Content Area ─────────────────────────────────── */
 
 .main {
@@ -87,6 +94,7 @@ ul {
 }
 
 
+<<<<<<< HEAD
 /* ── Navigation Bar ─────────────────────────────────────── */
 nav {
     position: fixed;
@@ -176,6 +184,9 @@ nav a.nav-cta:hover {
     box-shadow: 0 6px 20px rgba(5, 168, 255, 0.5);
     background: var(--color-accent);
 }
+=======
+
+>>>>>>> a52d7d0c2624a419de0a9ec704388e43c7f3783e
 
 /* ── Hero Section ──────────────────────────────────────── */
 .hero {
@@ -263,6 +274,9 @@ nav a.nav-cta:hover {
   animation: fadeInUp 1s ease 0.7s backwards;
 }
 
+
+
+
 /* ── Buttons ───────────────────────────────────────────── */
 .btn {
   padding: 1.2rem 3rem;
@@ -315,6 +329,9 @@ nav a.nav-cta:hover {
   color: var(--color-text);
 }
 
+
+
+
 /* ── About Section ─────────────────────────────────────── */
 .about {
   padding: var(--space-2xl) 5%;
@@ -357,6 +374,9 @@ nav a.nav-cta:hover {
   font-weight: 500;
   max-width: 900px;
 }
+
+
+
 
 /* Stats */
 .stats {
@@ -413,8 +433,10 @@ nav a.nav-cta:hover {
   letter-spacing: 1px;
 }
 
+
+
 /* ── Resource Cards (Tools) ────────────────────────────── */
-#tools-container {
+#tools-container ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -425,6 +447,9 @@ nav a.nav-cta:hover {
 }
 
 .Tools {
+  cursor: pointer;
+  justify-content: start;
+  height: 220px;
   border: 1px solid var(--color-border);
   padding: 20px;
   color: var(--color-sky);
@@ -442,16 +467,6 @@ nav a.nav-cta:hover {
   box-shadow: 0 8px 24px var(--color-sky-glow);
 }
 
-#links {
-  color: var(--color-text);
-  display: block;
-  text-decoration: none;
-}
-
-#links:hover {
-  color: var(--color-sky);
-}
-
 .Tools h2 {
   font-size: 1rem;
   font-weight: 700;
@@ -467,6 +482,8 @@ h5 {
   line-height: 1.5;
   margin-bottom: 10px;
 }
+
+
 
 /* Card icon */
 #icons {
@@ -496,6 +513,8 @@ h5 {
   font-size: 1rem;
 }
 
+
+
 /* ──  Logo & Nav brand ──────────────────────────────────── */
 nav .logo-container {
   display: flex;
@@ -524,6 +543,8 @@ nav .logo-text {
     3px 3px 0px var(--color-sky),
     6px 6px 0px var(--color-blue-deep);
 }
+
+
 
 /* ── Footer ───────────────────────────────────────────── */
 footer {
@@ -622,6 +643,8 @@ h4 {
   padding: 7px;
 }
 
+
+
 /* ── Animations ───────────────────────────────────────── */
 @keyframes fadeInUp {
   from {
@@ -633,6 +656,8 @@ h4 {
     transform: translateY(0);
   }
 }
+
+
 
 /* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -646,3 +671,30 @@ h4 {
     align-items: center;
   }
 }
+
+
+
+/* ── PAGGINATION ───────────────────────────────────────── */
+  .Pagination{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+  }
+
+  .Pagination div{
+    cursor: pointer;
+    background-color: var(--color-bg-card);
+    font-size: 14px;
+    border-radius: 10px;
+    margin: 0px 5px 0px 5px;
+    display: flex;
+    padding: 15px 25px 15px 25px;
+    border: 1px solid rgba(4, 205, 255, 0.426);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .Pagination div:hover{
+    border: 1px solid rgba(138, 224, 255, 0.597);
+    transform: translateY(-1px);
+    background-color: #070d5f33;
+  }
