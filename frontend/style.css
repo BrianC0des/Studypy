@@ -420,6 +420,9 @@ nav .logo-container {
 }
 
 nav .logo-image {
+    display: flex;
+    position: relative;
+    right: 5px;
     height: 60px;
     width: auto;
     filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.5));
