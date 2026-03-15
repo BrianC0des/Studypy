@@ -1,42 +1,205 @@
 (function () {
-  const scriptUrl = document.currentScript?.src || window.location.href;
-  const navUrl = new URL('nav.html', scriptUrl).href;
+  /* ─── Inline nav/sidebar HTML (no fetch needed, works on file://) ─── */
+  const NAV_HTML = `
+<nav>
+    <div class="container">
+        <div>
+            <a href="index.html" class="logo container">
+                <img src="assets/images/LUGU.png" alt="StudyPy" class="logo-image">
+                <div class="LogoText">StudyPy</div>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#explore">Explore</a></li>
+                <li><a href="index.html#footer">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-  function isRelativeUrl(url) {
-    if (!url) return false;
-    // Ignore hashes, absolute paths, protocol-relative, and schemes (http:, mailto:, etc.)
-    return !url.startsWith('#') && !url.startsWith('/') && !/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(url);
+<div class="sidebar close">
+    <div class="sidebar-header">
+        <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar">
+            <i class='bx bx-menu'></i>
+        </button>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a href="#">
+                <i class='bx bx-home-alt'></i>
+                <span class="link_name">Dashboard</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Dashboard</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-book-open'></i>
+                    <span class="link_name">Learning</span>
+                </a>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Learning</a></li>
+                <li><a href="/pages/Learning/Online Courses.html">Online Courses</a></li>
+                <li><a href="/pages/Learning/Interactive Coding.html">Interactive Coding</a></li>
+                <li><a href="/pages/Learning/Video Tutorials.html">Video Tutorials</a></li>
+                <li><a href="/pages/Learning/Book and eBooks.html">Books &amp; eBooks</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="link_name">Languages</span>
+                </a>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Languages</a></li>
+                <li><a href="/pages/languages/python.html">Python</a></li>
+                <li><a href="#">Java</a></li>
+                <li><a href="#">C/C++</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-wrench'></i>
+                    <span class="link_name">Dev Tools</span>
+                </a>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Dev Tools</a></li>
+                <li><a href="/pages/Dev Tools/IDEs.html">IDEs &amp; Editors</a></li>
+                <li><a href="/pages/Dev Tools/Versionctrl.html">Version Control</a></li>
+                <li><a href="/pages/Dev Tools/debugging-tools.html">Debugging Tools</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-file'></i>
+                    <span class="link_name">Docs</span>
+                </a>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Docs</a></li>
+                <li><a href="/pages/Docs/official-docs.html">Official Docs</a></li>
+                <li><a href="/pages/Docs/cheat-sheets.html">Cheat Sheets</a></li>
+                <li><a href="/pages/Docs/api-references.html">API References</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-trophy'></i>
+                    <span class="link_name">Challenges</span>
+                </a>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Challenges</a></li>
+                <li><a href="/pages/Challenges/Coding-problems.html">Coding Problems</a></li>
+                <li><a href="/pages/Challenges/projectideas.html">Project Ideas</a></li>
+                <li><a href="/pages/Challenges/competition.html">Competitions</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-group'></i>
+                    <span class="link_name">Communities</span>
+                </a>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Communities</a></li>
+                <li><a href="/pages/Communities/Forums.html">Forums</a></li>
+                <li><a href="/pages/Communities/Dsicord-Servers.html">Discord Servers</a></li>
+                <li><a href="/pages/Communities/Study-groups.html">Study Groups</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-briefcase'></i>
+                    <span class="link_name">Career</span>
+                </a>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Career</a></li>
+                <li><a href="/pages/Career/Interview-prep.html">Interview Prep</a></li>
+                <li><a href="/pages/Career/resume-building.html">Resume Building</a></li>
+                <li><a href="/pages/Career/job-boards.html">Job Boards</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-cog'></i>
+                <span class="link_name">Setting</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Setting</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>`;
+
+  /* ─── Inject into placeholder ─── */
+  const placeholder = document.getElementById("navbar-placeholder");
+  if (placeholder) {
+    placeholder.innerHTML = NAV_HTML;
   }
 
-  fetch(navUrl)
-    .then(res => res.text())
-    .then(html => {
-      const container = document.createElement('div');
-      container.innerHTML = html;
+  /* ─── Sidebar toggle ─── */
+  const sidebar = document.querySelector(".sidebar");
+  if (!sidebar) return;
 
-      // Fix relative paths so they resolve relative to nav.html (not the current page)
-      const mappings = [
-        { selector: 'a[href]', attr: 'href' },
-        { selector: 'img[src]', attr: 'src' },
-        { selector: 'link[href]', attr: 'href' },
-        { selector: 'script[src]', attr: 'src' },
-      ];
+  const syncSidebarState = () => {
+    document.body.classList.toggle(
+      "sidebar-collapsed",
+      sidebar.classList.contains("close")
+    );
+  };
 
-      mappings.forEach(({ selector, attr }) => {
-        container.querySelectorAll(selector).forEach(el => {
-          const value = el.getAttribute(attr);
-          if (isRelativeUrl(value)) {
-            try {
-              el.setAttribute(attr, new URL(value, navUrl).href);
-            } catch (e) {
-              // ignore invalid URLs
-            }
-          }
-        });
+  syncSidebarState();
+
+  const sidebarToggle = document.querySelector(".sidebar-toggle");
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener("click", () => {
+      sidebar.classList.toggle("close");
+      syncSidebarState();
+    });
+  }
+
+  /* ─── Click-based submenus ─── */
+  document.querySelectorAll(".iocn-link").forEach((iocnLink) => {
+    const link = iocnLink.querySelector("a");
+    if (!link) return;
+
+    if (!iocnLink.querySelector(".arrow")) {
+      const arrow = document.createElement("i");
+      arrow.className = "bx bxs-chevron-down arrow";
+      iocnLink.appendChild(arrow);
+    }
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const parentLi = iocnLink.closest("li");
+      if (!parentLi) return;
+
+      const isOpen = parentLi.classList.contains("showMenu");
+
+      document.querySelectorAll(".nav-links li.showMenu").forEach((li) => {
+        li.classList.remove("showMenu");
       });
 
-      const placeholder = document.getElementById('navbar-placeholder');
-      if (placeholder) placeholder.innerHTML = container.innerHTML;
-    })
-    .catch(err => console.error('Failed to load navbar:', err));
+      if (!isOpen) {
+        parentLi.classList.add("showMenu");
+      }
+    });
+  });
 })();
