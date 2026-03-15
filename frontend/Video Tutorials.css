@@ -11,6 +11,13 @@
 .page-hero .hero-inner {
   max-width: 980px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.page-hero .hero-inner p {
+  display: flex;
+  position: relative;
+  left: 130px;
 }
 
 .page-hero h1 {
