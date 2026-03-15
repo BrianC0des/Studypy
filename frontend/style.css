@@ -344,7 +344,7 @@ ul {
 
 
 /* ── Resource Cards (Tools) ────────────────────────────── */
-#tools-container {
+#tools-container ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -355,6 +355,9 @@ ul {
 }
 
 .Tools {
+  cursor: pointer;
+  justify-content: start;
+  height: 220px;
   border: 1px solid var(--color-border);
   padding: 20px;
   color: var(--color-sky);
@@ -370,16 +373,6 @@ ul {
   transform: translateY(-6px);
   border-color: var(--color-border-hover);
   box-shadow: 0 8px 24px var(--color-sky-glow);
-}
-
-#links {
-  color: var(--color-text);
-  display: block;
-  text-decoration: none;
-}
-
-#links:hover {
-  color: var(--color-sky);
 }
 
 .Tools h2 {
