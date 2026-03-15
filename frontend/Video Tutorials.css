@@ -1,0 +1,305 @@
+/* ── Video Tutorials page — page-specific styles only ──────────
+   Global resets, sidebar, navbar, and .main layout are in style.css
+   ─────────────────────────────────────────────────────────────── */
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.page-hero {
+  padding: 80px 20px 40px;
+  background: linear-gradient(120deg, #29292Da8, #121216);
+  color: #fff;
+}
+
+.page-hero .hero-inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.03em;
+}
+
+.page-hero p {
+  max-width: 720px;
+  margin-bottom: 1.6rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+/* ── Search bar inside hero ─────────────────────────────────── */
+#searchbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  max-width: 620px;
+  margin: 0 auto;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+#searchbar label {
+  color: #dff7fb;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0 6px;
+}
+
+#searchbar input[type="search"] {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  width: 320px;
+  max-width: 60vw;
+  outline: none;
+  transition: box-shadow 0.18s ease, width 0.18s ease;
+}
+
+#searchbar input[type="search"]:focus {
+  box-shadow: 0 0 0 3px rgba(41, 74, 81, 0.14);
+  width: 420px;
+  max-width: 80vw;
+}
+
+/* ── Tab filter bar ─────────────────────────────────────────── */
+.section-bar {
+  max-width: 1400px;
+  margin: -40px auto 28px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-bar .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  min-width: 0;
+}
+
+.section-bar .tab {
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  color: #dff7fb;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+  width: 128px;
+  min-width: 128px;
+  max-width: 128px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  /* reset browser button defaults */
+  height: auto;
+  font-family: inherit;
+}
+
+.section-bar .tab.active {
+  background: rgba(26, 44, 110, 0.6);
+  border-color: rgba(26, 44, 110, 0.8);
+  color: #fff;
+}
+
+.section-bar .tab:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ── Content wrapper ────────────────────────────────────────── */
+.content-section {
+  padding: 0 20px 60px;
+  background: transparent;
+}
+
+.tools-section {
+  max-width: 1400px;
+  margin: 0 auto 60px;
+  background: rgba(18, 18, 22, 0.75);
+  border-radius: 20px;
+  padding: 22px 20px 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Cards grid ─────────────────────────────────────────────── */
+#tools-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6px;
+}
+
+.Tools {
+  border: 1px solid rgba(14, 73, 100, 0.35);
+  padding: 14px;
+  color: rgb(145, 218, 235);
+  background: linear-gradient(180deg, rgba(6,10,12,0.55), rgba(3,6,8,0.55));
+  border-radius: 14px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  height: 100%;
+}
+
+.Tools:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(2, 6, 8, 0.6);
+  border-color: rgba(145, 218, 235, 0.18);
+}
+
+.Tools > .card-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link {
+  color: aliceblue;
+  display: block;
+  text-decoration: none;
+}
+
+.Tools h2 {
+  font-size: 18px;
+  margin: 0;
+  color: #dff7fb;
+  line-height: 1.15;
+  text-align: left;
+  letter-spacing: -0.2px;
+}
+
+.Tools h5 {
+  font-size: 12px;
+  color: #9bc3e3;
+  line-height: 1.4;
+  margin: 6px 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Embedded video preview ─────────────────────────────────── */
+.video-preview {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+  flex: 0 0 auto;
+}
+
+.video-preview iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  border: 0;
+  display: block;
+}
+
+/* ── Card icon ──────────────────────────────────────────────── */
+.Tools .card-icon,
+.card-icon {
+  height: 40px;
+  display: block;
+  margin: auto auto 0;
+  border-radius: 8px;
+}
+
+/* ── Category badges ────────────────────────────────────────── */
+.tools-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge--primary {
+  background: linear-gradient(90deg, #193940, #0b2a2b);
+  color: #dff7fb;
+  border: 1px solid rgba(145, 218, 235, 0.08);
+}
+
+.badge--sub {
+  background: rgba(255, 255, 255, 0.02);
+  color: #9bc3e3;
+  border: 1px solid rgba(41, 74, 81, 0.08);
+}
+
+.Tools .tools-badges + .card-link h2 {
+  margin-top: 6px;
+}
+
+/* ── No results ─────────────────────────────────────────────── */
+#no-results {
+  color: #fff;
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  #tools-container { padding: 0 10px; }
+  .section-bar { margin-top: 0; }
+}
+
+@media (max-width: 480px) {
+  .Tools h2 { font-size: 16px; }
+  #searchbar input[type="search"] { width: 180px; }
+}
+
+/* Harden card/embed sizing against global .Tools rules in style.css */
+#tools-container.videos-grid .Tools {
+  max-width: none;
+  height: auto;
+  min-width: 0;
+  overflow: hidden;
+}
+
+#tools-container.videos-grid .video-preview {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+#tools-container.videos-grid .video-preview iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

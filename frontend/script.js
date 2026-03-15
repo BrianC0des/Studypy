@@ -28,12 +28,12 @@
     </div>
     <ul class="nav-links">
         <li>
-            <a href="#">
+            <a href="frontend/index.html">
                 <i class='bx bx-home-alt'></i>
-                <span class="link_name">Dashboard</span>
+                <span class="link_name">Home</span>
             </a>
             <ul class="sub-menu blank">
-                <li><a class="link_name" href="#">Dashboard</a></li>
+                <li><a class="link_name" href="#">Home</a></li>
             </ul>
         </li>
         <li>
@@ -45,10 +45,10 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Learning</a></li>
-                <li><a href="./pages/Learning-Platforms/Online Courses.html">Online Courses</a></li>
-                <li><a href="./pages/Learning-Platforms/Interactive Coding.html">Interactive Coding</a></li>
-                <li><a href="./pages/Learning-Platforms/Video Tutorials.html">Video Tutorials</a></li>
-                <li><a href="./pages/Learning-Platforms/Book and eBooks.html">Books &amp; eBooks</a></li>
+                <li><a href="./pages/Learning/Online Courses.html">Online Courses</a></li>
+                <li><a href="./pages/Learning/Interactive Coding.html">Interactive Coding</a></li>
+                <li><a href="./pages/Learning/Video Tutorials.html">Video Tutorials</a></li>
+                <li><a href="./pages/Learning/Book and eBooks.html">Books &amp; eBooks</a></li>
             </ul>
         </li>
         <li>
@@ -157,6 +157,9 @@
   /* ─── Sidebar toggle ─── */
   const sidebar = document.querySelector(".sidebar");
   if (!sidebar) return;
+
+    if (window.__studypySidebarInit) return;
+    window.__studypySidebarInit = true;
 
   const syncSidebarState = () => {
     document.body.classList.toggle(
