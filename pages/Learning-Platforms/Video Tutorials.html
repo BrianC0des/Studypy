@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Studypy - Alpha </title>
-    <link rel="stylesheet" href="../../styles/style.css" />
+    <link rel="stylesheet" href="../../styles/Video Tutorials.css" />
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   </head>
@@ -203,33 +203,37 @@
       <i class="fa-solid fa-bars" id="sidebar-close"></i>
     </nav>
     <main class="main">
-      <div id="controls">
-        <div id="searchbar">
-          <i class="fa-solid fa-magnifying-glass" aria-hidden="true" style="color:#9bc3e3;"></i>
-          <label for="search-input">Search</label>
-          <input type="search" id="search-input" placeholder="Search videos or descriptions" aria-label="Search videos">
+      <section class="page-hero">
+        <div class="hero-inner">
+          <h1>StudyPY</h1>
+          <p> Master programming with expert-led video courses and comprehensive learning paths</p>
+          <div id="searchbar">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true" style="color:#9bc3e3;"></i>
+            <label for="search-input">Search</label>
+            <input type="search" id="search-input" placeholder="Search for courses, topics, or instructors..." aria-label="Search videos">
+          </div>
         </div>
-        <div id="filter">
-          <label for="genre-filter">Genre</label>
-          <select id="genre-filter" aria-label="Filter by genre">
-            <option value="all">All</option>
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="responsive">Responsive</option>
-            <option value="webdev">Web Development</option>
-            <option value="deployment">Deployment</option>
-            <option value="javascript">JavaScript</option>
-            <option value="framework">Frameworks</option>
-            <option value="devops">DevOps</option>
-            <option value="performance">Performance</option>
-            <option value="testing">Testing</option>
-            <option value="accessibility">Accessibility</option>
-          </select>
-          <button id="clear-filters" type="button">Clear</button>
+      </section>
+      <br> <br>
+      <section class="content-section">
+        <div class="section-bar">
+          <div class="tabs">
+            <button class="tab" type="button">HTML</button>
+            <button class="tab" type="button">CSS</button>
+            <button class="tab" type="button">Responsive</button>
+            <button class="tab" type="button">Web Development</button>
+            <button class="tab" type="button">Deployment</button>
+            <button class="tab" type="button">JavaScript</button>
+            <button class="tab" type="button">Frameworks</button>
+            <button class="tab" type="button">DevOps</button>
+            <button class="tab" type="button">Performance</button>
+            <button class="tab" type="button">Testing</button>
+            <button class="tab" type="button">Accessibility</button>
+          </div>
         </div>
-      </div>
-      <div id="no-results" style="display:none;text-align:center;color:#fff;margin:10px 0;">No videos found.</div>
-      <div id="tools-container" class="videos-grid">
+        <div id="no-results" style="display:none;text-align:center;color:#111;margin:10px 0;">No videos found.</div>
+      <section class="tools-section">
+        <div id="tools-container" class="videos-grid">
                 <div class="Tools" data-genres="html">
                   <a class="card-link" href="https://www.youtube.com/embed/gQojMIhELvM" target="_blank" title="WebDev Ep1">
                       <h2>HTML Tutorial for Beginners</h2>
@@ -1049,6 +1053,8 @@
           <h5>Practical selector patterns used in production apps.</h5>
           <img class="card-icon" src="assets/icons/Gearicon.png" alt="Selectors" title="Selectors icon">
         </div>
+      </div>
+    </section>
     </main>
     <script src="../../js/home.js"></script>
   </body>

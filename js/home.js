@@ -24,10 +24,29 @@ subMenuTitles.forEach((title) => {
 // Search & Filter for Learning Platorms
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
-  const genreSelect = document.getElementById('genre-filter');
-  const clearBtn = document.getElementById('clear-filters');
   const tools = Array.from(document.querySelectorAll('.Tools'));
   const noResults = document.getElementById('no-results');
+
+  const genreMap = {
+    'html': 'html',
+    'css': 'css',
+    'responsive': 'responsive',
+    'web development': 'webdev',
+    'deployment': 'deployment',
+    'javascript': 'javascript',
+    'frameworks': 'framework',
+    'devops': 'devops',
+    'performance': 'performance',
+    'testing': 'testing',
+    'accessibility': 'accessibility',
+    'all': 'all'
+  };
+
+  function getActiveGenre() {
+    const activeTab = document.querySelector('.tab.active');
+    const tabText = (activeTab?.textContent || '').toLowerCase().trim();
+    return genreMap[tabText] || 'all';
+  }
 
   // Inject category badges into each tool card based on data-genres
   function renderBadges() {
@@ -68,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function filterTools() {
     const q = normalize(searchInput?.value || '');
-    const genre = genreSelect?.value || 'all';
+    const genre = getActiveGenre();
     let visible = 0;
 
     tools.forEach(el => {
@@ -88,17 +107,39 @@ document.addEventListener('DOMContentLoaded', () => {
     if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
   }
 
-  if (searchInput && genreSelect) {
+  if (searchInput) {
     searchInput.addEventListener('input', filterTools);
-    genreSelect.addEventListener('change', filterTools);
-    clearBtn?.addEventListener('click', () => {
-      searchInput.value = '';
-      genreSelect.value = 'all';
-      filterTools();
-      searchInput.focus();
-    });
     filterTools();
   }
+
+  // Tab functionality for genre selection
+  const tabButtons = document.querySelectorAll('.tab');
+
+  function updateActiveTab() {
+    tabButtons.forEach(btn => {
+      const genre = genreMap[btn.textContent.trim().toLowerCase()] || 'all';
+      if (genre === getActiveGenre()) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all tabs
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active to clicked tab
+      button.classList.add('active');
+      // Trigger filter after tab change
+      filterTools();
+    });
+  });
+
+  // Initialize active tab + filter state
+  updateActiveTab();
+  filterTools();
 });
 
 
