@@ -1,11 +1,10 @@
-/* ── Video Tutorials page — page-specific styles only ──────────
-   Global resets, sidebar, navbar, and .main layout are in style.css
-   ─────────────────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-/* ── Hero ──────────────────────────────────────────────────── */
+/* Video Tutorials page-only styles. Global sidebar/main/nav stay in style.css. */
+
 .page-hero {
   padding: 80px 20px 40px;
-  background: linear-gradient(120deg, #29292Da8, #121216);
+  background: linear-gradient(120deg, #29292da8, #121216);
   color: #fff;
 }
 
@@ -27,7 +26,6 @@
   line-height: 1.5;
 }
 
-/* ── Search bar inside hero ─────────────────────────────────── */
 #searchbar {
   display: flex;
   align-items: center;
@@ -65,7 +63,6 @@
   max-width: 80vw;
 }
 
-/* ── Tab filter bar ─────────────────────────────────────────── */
 .section-bar {
   max-width: 1400px;
   margin: -40px auto 28px;
@@ -105,7 +102,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
-  /* reset browser button defaults */
   height: auto;
   font-family: inherit;
 }
@@ -120,7 +116,6 @@
   background: rgba(255, 255, 255, 0.14);
 }
 
-/* ── Content wrapper ────────────────────────────────────────── */
 .content-section {
   padding: 0 20px 60px;
   background: transparent;
@@ -137,7 +132,6 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ── Cards grid ─────────────────────────────────────────────── */
 #tools-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -149,11 +143,17 @@
   padding: 6px;
 }
 
+.card-link {
+  color: aliceblue;
+  display: block;
+  text-decoration: none;
+}
+
 .Tools {
   border: 1px solid rgba(14, 73, 100, 0.35);
   padding: 14px;
   color: rgb(145, 218, 235);
-  background: linear-gradient(180deg, rgba(6,10,12,0.55), rgba(3,6,8,0.55));
+  background: linear-gradient(180deg, rgba(6, 10, 12, 0.55), rgba(3, 6, 8, 0.55));
   border-radius: 14px;
   width: 100%;
   display: flex;
@@ -177,12 +177,6 @@
   color: inherit;
 }
 
-.card-link {
-  color: aliceblue;
-  display: block;
-  text-decoration: none;
-}
-
 .Tools h2 {
   font-size: 18px;
   margin: 0;
@@ -203,7 +197,6 @@
   overflow: hidden;
 }
 
-/* ── Embedded video preview ─────────────────────────────────── */
 .video-preview {
   width: 100%;
   overflow: hidden;
@@ -220,7 +213,6 @@
   display: block;
 }
 
-/* ── Card icon ──────────────────────────────────────────────── */
 .Tools .card-icon,
 .card-icon {
   height: 40px;
@@ -229,7 +221,6 @@
   border-radius: 8px;
 }
 
-/* ── Category badges ────────────────────────────────────────── */
 .tools-badges {
   display: flex;
   gap: 8px;
@@ -263,7 +254,6 @@
   margin-top: 6px;
 }
 
-/* ── No results ─────────────────────────────────────────────── */
 #no-results {
   color: #fff;
   padding: 20px;
@@ -271,22 +261,11 @@
   text-align: center;
 }
 
-/* ── Responsive ─────────────────────────────────────────────── */
-@media (max-width: 768px) {
-  #tools-container { padding: 0 10px; }
-  .section-bar { margin-top: 0; }
-}
-
-@media (max-width: 480px) {
-  .Tools h2 { font-size: 16px; }
-  #searchbar input[type="search"] { width: 180px; }
-}
-
-/* Harden card/embed sizing against global .Tools rules in style.css */
+/* Keep video card sizing from being overridden by global .Tools rules. */
 #tools-container.videos-grid .Tools {
   max-width: none;
-  height: auto;
   min-width: 0;
+  height: auto;
   overflow: hidden;
 }
 
@@ -301,5 +280,24 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+}
+
+@media (max-width: 768px) {
+  #tools-container {
+    padding: 0 10px;
+  }
+
+  .section-bar {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .Tools h2 {
+    font-size: 16px;
+  }
+
+  #searchbar input[type="search"] {
+    width: 180px;
+  }
 }

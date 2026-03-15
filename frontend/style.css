@@ -109,7 +109,7 @@ body:not(.sidebar-collapsed) .main {
   left: 0;
   height: 100%;
   width: 260px;
-  background: #1d1b31;
+  background: var(--color-bg);
   z-index: 1200;
   transition: all 0.5s ease;
 }
@@ -142,7 +142,7 @@ body:not(.sidebar-collapsed) .main {
 }
 
 .sidebar .sidebar-toggle:hover {
-  background: #006330;
+  background: rgba(255, 255, 255, 0.137);
 }
 
 .sidebar .sidebar-toggle i {
@@ -232,6 +232,11 @@ body:not(.sidebar-collapsed) .main {
   padding: 0;
 }
 
+.sidebar.close .nav-links li a i:hover{
+  color: var(--color-sky);
+}
+
+
 .sidebar .nav-links li a .link_name {
   flex: 1;
   font-size: 16px;
@@ -259,7 +264,7 @@ body:not(.sidebar-collapsed) .main {
 .sidebar .nav-links li .sub-menu {
   padding: 6px 6px 14px 80px;
   margin-top: -10px;
-  background: #1d1b31;
+  background: var(--color-bg);
   display: none;
 }
 
@@ -278,6 +283,7 @@ body:not(.sidebar-collapsed) .main {
 
 .sidebar .nav-links li .sub-menu a:hover {
   opacity: 1;
+  color: var(--color-accent);
 }
 
 /* ── Collapsed sidebar: submenu flies out to the right on click ── */
@@ -288,7 +294,7 @@ body:not(.sidebar-collapsed) .main {
   margin-top: 0;
   padding: 10px 20px;
   border-radius: 0 6px 6px 0;
-  background: #1d1b31;
+  background: var(--color-bg-card);
   opacity: 0;
   display: block;
   pointer-events: none;

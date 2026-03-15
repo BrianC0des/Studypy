@@ -28,7 +28,7 @@
     </div>
     <ul class="nav-links">
         <li>
-            <a href="frontend/index.html">
+            <a href="/frontend/index.html">
                 <i class='bx bx-home-alt'></i>
                 <span class="link_name">Home</span>
             </a>
