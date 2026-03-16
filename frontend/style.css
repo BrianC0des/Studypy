@@ -421,8 +421,9 @@ nav .logo-container {
 
 nav .logo-image {
     display: flex;
+    border-radius: var(--radius-sm);
     position: relative;
-    right: 5px;
+    right: 10px;
     height: 60px;
     width: auto;
     filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.5));
@@ -436,7 +437,7 @@ nav .logo-text {
     color: var(--poke-yellow);
     letter-spacing: 2px;
     line-height: 1.2;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);  
 }
 nav .logo-text span {
     display: block;
@@ -447,7 +448,15 @@ nav .logo-text span {
     font-weight: 600;
 }
 
-nav ul { display: flex; list-style: none; gap: 0.2rem; align-items: center; }
+nav ul { 
+  display: flex; 
+  list-style: none; 
+  gap: 0.2rem; 
+  align-items: center; 
+  display: flex;
+  position: relative;
+  left: 120px;
+}
 
 nav a {
     color: rgba(255, 255, 255, 0.85);
@@ -457,7 +466,9 @@ nav a {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     transition: all 0.25s ease;
+    display: flex;
     position: relative;
+    right: 50px;
     padding: 0.5rem 0.85rem;
     border-radius: 6px;
 }
