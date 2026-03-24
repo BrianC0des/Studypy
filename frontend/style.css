@@ -422,6 +422,7 @@ nav .logo-container {
 nav .logo-image {
     height: 60px;
     width: auto;
+    border-radius: var(--radius-sm);
     filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.5));
     transition: transform 0.3s ease;
 }

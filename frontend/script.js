@@ -4,17 +4,17 @@
 <nav>
     <div class="container">
         <div>
-            <a href="index.html" class="logo container">
-                <img src="assets/images/LUGU.png" alt="StudyPy" class="logo-image">
+            <a href="/frontend/index.html" class="logo container">
+                <img src="/frontend/assets/images/LUGU.png" alt="StudyPy" class="logo-image">
                 <div class="LogoText">StudyPy</div>
             </a>
         </div>
         <div>
             <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#explore">Explore</a></li>
-                <li><a href="index.html#footer">Contact</a></li>
+                <li><a href="/frontend/index.html#home">Home</a></li>
+                <li><a href="/frontend/index.html#about">About</a></li>
+                <li><a href="/frontend/index.html#explore">Explore</a></li>
+                <li><a href="/frontend/index.html#footer">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -33,7 +33,7 @@
                 <span class="link_name">Home</span>
             </a>
             <ul class="sub-menu blank">
-                <li><a class="link_name" href="#">Home</a></li>
+                <li><a class="link_name" href="/frontend/index.html">Home</a></li>
             </ul>
         </li>
         <li>
@@ -45,10 +45,10 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Learning</a></li>
-                <li><a href="./pages/Learning/Online Courses.html">Online Courses</a></li>
-                <li><a href="./pages/Learning/Interactive Coding.html">Interactive Coding</a></li>
-                <li><a href="./pages/Learning/Video Tutorials.html">Video Tutorials</a></li>
-                <li><a href="./pages/Learning/Book and eBooks.html">Books &amp; eBooks</a></li>
+                <li><a href="/frontend/pages/Learning/Online Courses.html">Online Courses</a></li>
+                <li><a href="/frontend/pages/Learning/Interactive Coding.html">Interactive Coding</a></li>
+                <li><a href="/frontend/pages/Learning/Video Tutorials.html">Video Tutorials</a></li>
+                <li><a href="/frontend/pages/Learning/Book and eBooks.html">Books &amp; eBooks</a></li>
             </ul>
         </li>
         <li>
@@ -60,7 +60,7 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Languages</a></li>
-                <li><a href="./pages/languages/python.html">Python</a></li>
+                <li><a href="/frontend/pages/languages/python.html">Python</a></li>
                 <li><a href="#">Java</a></li>
                 <li><a href="#">C/C++</a></li>
                 <li><a href="#">JavaScript</a></li>
@@ -75,9 +75,9 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Dev Tools</a></li>
-                <li><a href="#">IDEs &amp; Editors</a></li>
-                <li><a href="#">Version Control</a></li>
-                <li><a href="#">Debugging Tools</a></li>
+                <li><a href="/frontend/pages/Dev Tools/IDES.html">IDEs &amp; Editors</a></li>
+                <li><a href="/frontend/pages/Dev Tools/Versionctrl.html">Version Control</a></li>
+                <li><a href="/frontend/pages/Dev Tools/debugging-tools.html">Debugging Tools</a></li>
             </ul>
         </li>
         <li>
@@ -89,9 +89,9 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Docs</a></li>
-                <li><a href="#">Official Docs</a></li>
-                <li><a href="#">Cheat Sheets</a></li>
-                <li><a href="#">API References</a></li>
+                <li><a href="/frontend/pages/Docs/official-docs.html">Official Docs</a></li>
+                <li><a href="/frontend/pages/Docs/cheat-sheets.html">Cheat Sheets</a></li>
+                <li><a href="/frontend/pages/Docs/api-references.html">API References</a></li>
             </ul>
         </li>
         <li>
@@ -103,9 +103,9 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Challenges</a></li>
-                <li><a href="#">Coding Problems</a></li>
-                <li><a href="#">Project Ideas</a></li>
-                <li><a href="#">Competitions</a></li>
+                <li><a href="/frontend/pages/Challenges/Coding-problems.html">Coding Problems</a></li>
+                <li><a href="/frontend/pages/Challenges/projectideas.html">Project Ideas</a></li>
+                <li><a href="/frontend/pages/Challenges/competition.html">Competitions</a></li>
             </ul>
         </li>
         <li>
@@ -117,9 +117,9 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Communities</a></li>
-                <li><a href="#">Forums</a></li>
-                <li><a href="#">Discord Servers</a></li>
-                <li><a href="#">Study Groups</a></li>
+                <li><a href="/frontend/pages/Communities/Forums.html">Forums</a></li>
+                <li><a href="/frontend/pages/Communities/Dsicord-Servers.html">Discord Servers</a></li>
+                <li><a href="/frontend/pages/Communities/Study-groups.html">Study Groups</a></li>
             </ul>
         </li>
         <li>
@@ -131,9 +131,9 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Career</a></li>
-                <li><a href="#">Interview Prep</a></li>
-                <li><a href="#">Resume Building</a></li>
-                <li><a href="#">Job Boards</a></li>
+                <li><a href="/frontend/pages/Career/Interview-prep.html">Interview Prep</a></li>
+                <li><a href="/frontend/pages/Career/resume-building.html">Resume Building</a></li>
+                <li><a href="/frontend/pages/Career/job-boards.html">Job Boards</a></li>
             </ul>
         </li>
         <li>
@@ -158,8 +158,8 @@
   const sidebar = document.querySelector(".sidebar");
   if (!sidebar) return;
 
-    if (window.__studypySidebarInit) return;
-    window.__studypySidebarInit = true;
+  if (window.__studypySidebarInit) return;
+  window.__studypySidebarInit = true;
 
   const syncSidebarState = () => {
     document.body.classList.toggle(
