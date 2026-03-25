@@ -45,7 +45,7 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Learning</a></li>
-                <li><a href="/frontend/pages/Learning/Online Courses.html">Online Courses</a></li>
+                <li><a href="/frontend/pages/Learning/online-courses.html">Online Courses</a></li>
                 <li><a href="/frontend/pages/Learning/Interactive Coding.html">Interactive Coding</a></li>
                 <li><a href="/frontend/pages/Learning/Video Tutorials.html">Video Tutorials</a></li>
                 <li><a href="/frontend/pages/Learning/Book and eBooks.html">Books &amp; eBooks</a></li>
@@ -61,9 +61,9 @@
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Languages</a></li>
                 <li><a href="/frontend/pages/languages/python.html">Python</a></li>
-                <li><a href="#">Java</a></li>
-                <li><a href="#">C/C++</a></li>
-                <li><a href="#">JavaScript</a></li>
+                <li><a href="/frontend/pages/languages/java.html">Java</a></li>
+                <li><a href="/frontend/pages/languages/c-cpp.html">C/C++</a></li>
+                <li><a href="/frontend/pages/languages/javascript.html">JavaScript</a></li>
             </ul>
         </li>
         <li>
@@ -137,12 +137,12 @@
             </ul>
         </li>
         <li>
-            <a href="#">
+            <a href="/frontend/pages/settings.html">
                 <i class='bx bx-cog'></i>
                 <span class="link_name">Setting</span>
             </a>
             <ul class="sub-menu blank">
-                <li><a class="link_name" href="#">Setting</a></li>
+                <li><a class="link_name" href="/frontend/pages/settings.html">Setting</a></li>
             </ul>
         </li>
     </ul>
