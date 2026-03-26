@@ -127,7 +127,8 @@ body:not(.sidebar-collapsed) .main {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 16px;
+  padding: 0 16px ;
+  margin: 20px 0 17px 0;
 }
 
 .sidebar .sidebar-toggle {
@@ -378,7 +379,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--color-sky-dim);
+    background: var(--color-bg);
     z-index: 1000;
     padding: 0.7rem 5%;
     border-bottom: 4px solid var(--color-bg-card);
