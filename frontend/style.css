@@ -718,8 +718,99 @@ nav a.active { color: var(--color-accent); }
   letter-spacing: 1px;
 }
 
+.explore {
+  padding: var(--space-2xl) 5%;
+  background: var(--color-bg);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.explore h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: var(--space-md);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.explore p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+  font-weight: 500;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.explore-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--space-lg);
+}
+
+.news-card {
+  width: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-accent);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+}
+
+.news-card__image {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(160deg, #7ef0f0 0%, #5dd8ea 40%, #74b8e8 100%);
+  /* swap for an <img> tag when you have a real photo */
+}
+
+.news-card__body {
+  padding: 18px 20px 24px;
+}
+
+.news-card__source {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  display: block; /* override your .explore p flex styles */
+  max-width: unset;
+}
+
+.news-card__excerpt {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  display: block; /* override your .explore p flex styles */
+  max-width: unset;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.news-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
 /* ── Resource Cards (Tools) — global/homepage styles ────────────────────────────── */
 #tools-container ul{
   display: flex;
