@@ -47,7 +47,7 @@
                 <li><a class="link_name" href="#">Learning</a></li>
                 <li><a href="/frontend/pages/Learning/online-courses.html">Online Courses</a></li>
                 <li><a href="/frontend/pages/Learning/Interactive Coding.html">Interactive Coding</a></li>
-                <li><a href="/frontend/pages/Learning/Video Tutorials.html">Video Tutorials</a></li>
+                        <li><a href="/frontend/pages/Learning/video-tutorials.html">Video Tutorials</a></li>
                 <li><a href="/frontend/pages/Learning/Book and eBooks.html">Books &amp; eBooks</a></li>
             </ul>
         </li>
@@ -76,7 +76,7 @@
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Dev Tools</a></li>
                 <li><a href="/frontend/pages/Dev Tools/IDES.html">IDEs &amp; Editors</a></li>
-                <li><a href="/frontend/pages/Dev Tools/Versionctrl.html">Version Control</a></li>
+                        <li><a href="/frontend/pages/Dev Tools/version-control.html">Version Control</a></li>
                 <li><a href="/frontend/pages/Dev Tools/debugging-tools.html">Debugging Tools</a></li>
             </ul>
         </li>
@@ -103,7 +103,7 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Challenges</a></li>
-                <li><a href="/frontend/pages/Challenges/Coding-problems.html">Coding Problems</a></li>
+                        <li><a href="/frontend/pages/Challenges/coding-problems.html">Coding Problems</a></li>
                 <li><a href="/frontend/pages/Challenges/projectideas.html">Project Ideas</a></li>
                 <li><a href="/frontend/pages/Challenges/competition.html">Competitions</a></li>
             </ul>
@@ -154,12 +154,9 @@
     placeholder.innerHTML = NAV_HTML;
   }
 
-  /* ─── Sidebar toggle ─── */
-  const sidebar = document.querySelector(".sidebar");
-  if (!sidebar) return;
-
-  if (window.__studypySidebarInit) return;
-  window.__studypySidebarInit = true;
+    /* ─── Sidebar toggle ─── */
+    const sidebar = document.querySelector(".sidebar");
+    window.__studypySidebarInit = true;
 
   const syncSidebarState = () => {
     document.body.classList.toggle(
