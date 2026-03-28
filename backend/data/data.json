@@ -2,11 +2,11 @@
     "categories" : [
         {
             "name": "learning",
-            "path": "frontend/pages/Learning",
+            "path": "pages/Learning",
             "pages": [
                 {
                     "name": "interactive-coding",
-                    "path": "frontend/pages/Learning/interactive-coding.html",
+                    "path": "pages/Learning/interactive-coding.html",
                     "links": [
 
                         {
