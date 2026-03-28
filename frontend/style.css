@@ -614,7 +614,28 @@ nav a.active { color: var(--color-accent); }
   color: var(--color-text);
 }
 
+#load-more-btn {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 24px auto 40px;
+}
 
+#load-more-btn:hover {
+  background-color: #149cea67;
+  color: #fff;
+  box-shadow: 0 0 15px #149cea3a, 0 0 30px #149cea41, 0 0 45px #149cea4c;
+}
 
 
 /* ── About Section ─────────────────────────────────────── */
@@ -717,9 +738,155 @@ nav a.active { color: var(--color-accent); }
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+/*explore*/
+.explore {
+  padding: var(--space-2xl) 5%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg); /* base dark bg */
+}
 
+/* Circuit grid overlay sits inside .explore */
+.explore::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 19px,
+      rgba(59, 130, 246, 0.15) 19px,
+      rgba(59, 130, 246, 0.15) 20px,
+      transparent 20px,
+      transparent 39px,
+      rgba(59, 130, 246, 0.15) 39px,
+      rgba(59, 130, 246, 0.15) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 19px,
+      rgba(59, 130, 246, 0.15) 19px,
+      rgba(59, 130, 246, 0.15) 20px,
+      transparent 20px,
+      transparent 39px,
+      rgba(59, 130, 246, 0.15) 39px,
+      rgba(59, 130, 246, 0.15) 40px
+    ),
+    radial-gradient(
+      circle at 20px 20px,
+      rgba(37, 99, 235, 0.18) 2px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 40px 40px,
+      rgba(37, 99, 235, 0.18) 2px,
+      transparent 2px
+    );
+  background-size:
+    40px 40px,
+    40px 40px,
+    40px 40px,
+    40px 40px;
+}
 
+/* Make sure content sits above the grid */
+.explore .container {
+  position: relative;
+  z-index: 1;
+}
 
+.explore h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: var(--space-md);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+  font-weight: 500;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--space-lg);
+}
+
+.news-card {
+  width: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-accent);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+}
+
+.news-card__image {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(160deg, #7ef0f0 0%, #5dd8ea 40%, #74b8e8 100%);
+}
+
+.news-card__body {
+  padding: 18px 20px 24px;
+}
+
+.news-card__source {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  display: block;
+  max-width: unset;
+}
+
+.news-card__excerpt {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  display: block;
+  max-width: unset;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.news-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
 /* ── Resource Cards (Tools) — global/homepage styles ────────────────────────────── */
 #tools-container ul{
   display: flex;
@@ -943,37 +1110,13 @@ h4 {
   }
 }
 
-/* ── PAGINATION ───────────────────────────────────────── */
-.Pagination {
-  display: flex;
-  justify-content: center;
-  margin: 50px;
-}
-
-.Pagination div {
-  cursor: pointer;
-  background-color: var(--color-bg-card);
-  font-size: 14px;
-  border-radius: 10px;
-  margin: 0px 5px 0px 5px;
-  display: flex;
-  padding: 15px 25px 15px 25px;
-  border: 1px solid rgba(4, 205, 255, 0.426);
-  transition: all 0.2s ease-in-out;
-}
-
-.Pagination div:hover {
-  border: 1px solid rgba(138, 224, 255, 0.597);
-  transform: translateY(-1px);
-  background-color: #070d5f33;
-}
-
-
 /* ═══════════════════════════════════════════════════════════
    VIDEO TUTORIALS PAGE — page-specific styles
    (Global sidebar/main/nav stay above in the shared section)
    ═══════════════════════════════════════════════════════════ */
-
+.Tools.hidden-card {
+    display: none;
+}
 .page-hero {
   padding: 80px 20px 40px;
   background: linear-gradient(120deg, #29292da8, #121216);
@@ -1279,3 +1422,5 @@ h4 {
     width: 180px;
   }
 }
+
+
