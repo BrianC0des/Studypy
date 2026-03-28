@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const noResults = document.getElementById('no-results');
   const loadMoreBtn = document.getElementById('load-more-btn');
 
-  const BATCH_SIZE = 8;
+  const BATCH_SIZE = 12;
   let currentBatch = 0;
   let filteredTools = []; // tracks currently matching cards
 

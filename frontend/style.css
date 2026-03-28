@@ -738,14 +738,69 @@ nav a.active { color: var(--color-accent); }
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
+/*explore*/
 .explore {
   padding: var(--space-2xl) 5%;
-  background: var(--color-bg);
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-bg); /* base dark bg */
+}
+
+/* Circuit grid overlay sits inside .explore */
+.explore::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 19px,
+      rgba(59, 130, 246, 0.15) 19px,
+      rgba(59, 130, 246, 0.15) 20px,
+      transparent 20px,
+      transparent 39px,
+      rgba(59, 130, 246, 0.15) 39px,
+      rgba(59, 130, 246, 0.15) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 19px,
+      rgba(59, 130, 246, 0.15) 19px,
+      rgba(59, 130, 246, 0.15) 20px,
+      transparent 20px,
+      transparent 39px,
+      rgba(59, 130, 246, 0.15) 39px,
+      rgba(59, 130, 246, 0.15) 40px
+    ),
+    radial-gradient(
+      circle at 20px 20px,
+      rgba(37, 99, 235, 0.18) 2px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 40px 40px,
+      rgba(37, 99, 235, 0.18) 2px,
+      transparent 2px
+    );
+  background-size:
+    40px 40px,
+    40px 40px,
+    40px 40px,
+    40px 40px;
+}
+
+/* Make sure content sits above the grid */
+.explore .container {
+  position: relative;
+  z-index: 1;
 }
 
 .explore h2 {
@@ -770,6 +825,7 @@ nav a.active { color: var(--color-accent); }
   justify-content: center;
   align-items: center;
 }
+
 .explore-cards {
   display: flex;
   flex-wrap: wrap;
@@ -799,7 +855,6 @@ nav a.active { color: var(--color-accent); }
   width: 100%;
   height: 180px;
   background: linear-gradient(160deg, #7ef0f0 0%, #5dd8ea 40%, #74b8e8 100%);
-  /* swap for an <img> tag when you have a real photo */
 }
 
 .news-card__body {
@@ -811,7 +866,7 @@ nav a.active { color: var(--color-accent); }
   color: var(--color-text-muted);
   letter-spacing: 0.04em;
   margin-bottom: 8px;
-  display: block; /* override your .explore p flex styles */
+  display: block;
   max-width: unset;
 }
 
@@ -819,7 +874,7 @@ nav a.active { color: var(--color-accent); }
   font-size: 14px;
   color: var(--color-text-muted);
   line-height: 1.65;
-  display: block; /* override your .explore p flex styles */
+  display: block;
   max-width: unset;
   margin-bottom: 0;
   font-weight: 400;
