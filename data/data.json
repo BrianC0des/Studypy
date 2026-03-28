@@ -5,8 +5,8 @@
             "path": "frontend/pages/Learning",
             "pages": [
                 {
-                    "name": "interaciveCoding",
-                    "path": "frontend/pages/Learning/Interactive Coding.html",
+                    "name": "interactive-coding",
+                    "path": "frontend/pages/Learning/interactive-coding.html",
                     "links": [
 
                         {
