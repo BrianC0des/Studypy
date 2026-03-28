@@ -60,11 +60,11 @@
             </div>
             <ul class="sub-menu">
                 <li><a class="link_name" href="#">Languages</a></li>
-                <li><a href="/pages/languages/python.html">Python</a></li>
-                <li><a href="/pages/languages/java.html">Java</a></li>
-                <li><a href="/pages/languages/c-cpp.html">C/C++</a></li>
-                <li><a href="/pages/languages/javascript.html">JavaScript</a></li>
-                <li><a href="/pages/languages/php.html">PHP</a></li>
+                <li><a href="pages/languages/python.html">Python</a></li>
+                <li><a href="pages/languages/java.html">Java</a></li>
+                <li><a href="pages/languages/c-cpp.html">C/C++</a></li>
+                <li><a href="pages/languages/javascript.html">JavaScript</a></li>
+                <li><a href="pages/languages/php.html">PHP</a></li>
             </ul>
         </li>
         <li>
