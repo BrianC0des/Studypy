@@ -614,7 +614,28 @@ nav a.active { color: var(--color-accent); }
   color: var(--color-text);
 }
 
+#load-more-btn {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 24px auto 40px;
+}
 
+#load-more-btn:hover {
+  background-color: #149cea67;
+  color: #fff;
+  box-shadow: 0 0 15px #149cea3a, 0 0 30px #149cea41, 0 0 45px #149cea4c;
+}
 
 
 /* ── About Section ─────────────────────────────────────── */
@@ -1034,37 +1055,13 @@ h4 {
   }
 }
 
-/* ── PAGINATION ───────────────────────────────────────── */
-.Pagination {
-  display: flex;
-  justify-content: center;
-  margin: 50px;
-}
-
-.Pagination div {
-  cursor: pointer;
-  background-color: var(--color-bg-card);
-  font-size: 14px;
-  border-radius: 10px;
-  margin: 0px 5px 0px 5px;
-  display: flex;
-  padding: 15px 25px 15px 25px;
-  border: 1px solid rgba(4, 205, 255, 0.426);
-  transition: all 0.2s ease-in-out;
-}
-
-.Pagination div:hover {
-  border: 1px solid rgba(138, 224, 255, 0.597);
-  transform: translateY(-1px);
-  background-color: #070d5f33;
-}
-
-
 /* ═══════════════════════════════════════════════════════════
    VIDEO TUTORIALS PAGE — page-specific styles
    (Global sidebar/main/nav stay above in the shared section)
    ═══════════════════════════════════════════════════════════ */
-
+.Tools.hidden-card {
+    display: none;
+}
 .page-hero {
   padding: 80px 20px 40px;
   background: linear-gradient(120deg, #29292da8, #121216);
@@ -1370,3 +1367,5 @@ h4 {
     width: 180px;
   }
 }
+
+
