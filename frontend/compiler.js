@@ -64,7 +64,7 @@ function initCompiler(config) {
     runBtn.disabled = true;
 
     try {
-      const res = await fetch('http://localhost:3000/run', {
+      const res = await fetch('https://studypy-back-end.onrender.com/run', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ language, code, input }),
