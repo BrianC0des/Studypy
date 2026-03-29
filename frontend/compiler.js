@@ -65,6 +65,7 @@ function initCompiler(config) {
 
     try {
       const res = await fetch('https://studypy-back-end.onrender.com/run', {
+
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ language, code, input }),
